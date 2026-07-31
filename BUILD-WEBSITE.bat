@@ -14,5 +14,7 @@ if errorlevel 1 (
   exit /b 1
 )
 echo.
-echo Build complete. The upload-ready files are in the dist folder.
+echo Build complete.
+echo - Hosting files: dist folder
+echo - GitHub Pages files: docs folder
 pause

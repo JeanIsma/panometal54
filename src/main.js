@@ -23,7 +23,7 @@ const icons = {
   close: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>`
 };
 
-const brandMark = `<svg viewBox="0 0 56 56" role="img" aria-label="PanoMetal54"><rect x="6" y="6" width="44" height="44" rx="8" fill="none" stroke="currentColor" stroke-width="4"/><path d="M17 39V17h13c5 0 8 2.7 8 7.1S35 31 30 31h-6v8h-7Zm7-14h5.2c1.9 0 2.8-.9 2.8-2.5S31.1 20 29.2 20H24v5Z" fill="currentColor"/><path d="M33.5 36.5h9" stroke="#ff5a1f" stroke-width="3.4" stroke-linecap="round"/><path d="M38 31v11" stroke="#ff5a1f" stroke-width="3.4" stroke-linecap="round"/><circle cx="43.5" cy="15" r="4" fill="#ff5a1f"/></svg>`;
+const brandMark = `<svg viewBox="0 0 64 64" role="img" aria-label="PanoMetal54"><rect x="4" y="4" width="56" height="56" rx="14" fill="#0f1111"/><rect x="10" y="10" width="44" height="44" rx="10" fill="none" stroke="#f4f1ea" stroke-width="3.5"/><path d="M18 45V19h13.5c5.2 0 8.4 3 8.4 7.8 0 4.9-3.2 8-8.4 8H25.3V45H18Zm7.3-16.2h5.1c1.7 0 2.7-.8 2.7-2.3s-1-2.3-2.7-2.3h-5.1v4.6Z" fill="#f4f1ea"/><path d="M37 39.8h11.5" stroke="#ff6a2a" stroke-width="3.8" stroke-linecap="round"/><path d="M42.7 34.2v11.2" stroke="#ff6a2a" stroke-width="3.8" stroke-linecap="round"/><circle cx="47.8" cy="18" r="3.4" fill="#ff6a2a"/></svg>`;
 
 const waUrl = (message) => {
   if (!business.whatsapp) return "#";
@@ -36,7 +36,7 @@ const projectCard = (project, index) => `
   <div class="card-image-wrap">
     <img src="${project.image}" alt="${project.title}" loading="${index < 2 ? "eager" : "lazy"}" decoding="async" style="object-position:${project.imagePosition || "center"}">
     <span class="concept-label">GERÇEK PROJE</span>
-    <button class="image-quote" data-quick-product="${project.title}"><span>Bu işe benzer fiyat sor</span>${icons.arrow}</button>
+    <button class="image-quote" data-quick-product="${project.title}"><span>Benzer iş için fiyat iste</span>${icons.arrow}</button>
   </div>
   <div class="card-body">
     <div class="card-meta"><span>${String(index + 1).padStart(2, "0")}</span><span>${project.category}</span></div>
@@ -55,7 +55,7 @@ const solutionCard = (product, index) => `
     <h3>${product.title}</h3>
     <p>${product.description}</p>
     <div class="tag-row">${product.tags.map(tag => `<span>${tag}</span>`).join("")}</div>
-    <button class="text-link" data-quick-product="${product.title}">WhatsApp ile fiyat sor ${icons.arrow}</button>
+    <button class="text-link" data-quick-product="${product.title}">WhatsApp ile fiyat iste ${icons.arrow}</button>
   </div>
 </article>`;
 
@@ -69,7 +69,7 @@ app.innerHTML = `
 <header class="site-header" id="siteHeader">
   <a class="brand" href="#top" aria-label="PanoMetal54 ana sayfa">
     <span class="brand-mark">${brandMark}</span>
-    <span class="brand-copy"><strong>PANOMETAL54</strong><small>METAL PANO & KAYNAK İŞLERİ · SAKARYA</small></span>
+    <span class="brand-copy"><strong>PANOMETAL54</strong><small>METAL PANO, DOLAP, KAPI VE KAYNAK · SAKARYA</small></span>
   </a>
   <nav class="desktop-nav" aria-label="Ana menü">
     <a href="#projeler">Projeler</a>
@@ -104,7 +104,7 @@ app.innerHTML = `
           <button class="button button-light button-large" data-phone>${icons.phone} Hemen ara</button>
         </div>
         <p class="hero-note">İnsanlar bize en hızlı şekilde WhatsApp üzerinden ulaşsın diye butonlar aktif bırakıldı.</p>
-        <div class="social-inline"><a href="${business.instagram}" target="_blank" rel="noopener noreferrer">${icons.instagram}<span>Instagram / panometal54</span></a><a href="${business.facebook}" target="_blank" rel="noopener noreferrer">${icons.facebook}<span>Facebook / panometal54</span></a></div>
+        <div class="social-inline"><a href="${business.instagram}" target="_blank" rel="noopener noreferrer">${icons.instagram}<span>Instagram / @panometal54</span></a><a href="${business.facebook}" target="_blank" rel="noopener noreferrer">${icons.facebook}<span>Facebook sayfası</span></a></div>
       </div>
       <aside class="hero-quote-card">
         <div class="quote-card-top"><span>HIZLI TEKLİF</span><strong>60 saniye</strong></div>
@@ -232,8 +232,8 @@ app.innerHTML = `
   </section>
 </main>
 <footer class="site-footer">
-  <div class="container footer-top"><a class="brand footer-brand" href="#top"><span class="brand-mark">${brandMark}</span><span class="brand-copy"><strong>PANOMETAL54</strong><small>METAL PANO & KAYNAK İŞLERİ</small></span></a><p>Gerçek iş fotoğraflarıyla güven veren, WhatsApp odaklı metal üretim sitesi.</p></div>
-  <div class="container footer-grid"><div><span>HİZMET</span><a href="#projeler">Su sayacı panoları</a><a href="#hizmetler">Metal dolaplar</a><a href="#hizmetler">Kapı ve korkuluk</a><a href="#hizmetler">Raf ve özel üretim</a></div><div><span>İLETİŞİM</span><button data-phone>${business.phoneDisplay}</button><button data-whatsapp-general>WhatsApp</button><a href="${business.instagram}" target="_blank" rel="noopener noreferrer">Instagram / panometal54</a><a href="${business.facebook}" target="_blank" rel="noopener noreferrer">Facebook / panometal54</a></div><div><span>MENÜ</span><a href="#surec">Nasıl çalışır?</a><a href="#hakkimizda">Hakkımızda</a><a href="#sss">Sık sorulanlar</a><button data-open-quote>Fiyat sor</button></div></div>
+  <div class="container footer-top"><a class="brand footer-brand" href="#top"><span class="brand-mark">${brandMark}</span><span class="brand-copy"><strong>PANOMETAL54</strong><small>METAL PANO, DOLAP VE KAYNAK</small></span></a><p>Gerçek iş fotoğraflarıyla güven veren, WhatsApp odaklı metal üretim sitesi.</p></div>
+  <div class="container footer-grid"><div><span>HİZMET</span><a href="#projeler">Su sayacı panoları</a><a href="#hizmetler">Metal dolaplar</a><a href="#hizmetler">Kapı ve korkuluk</a><a href="#hizmetler">Raf ve özel üretim</a></div><div><span>İLETİŞİM</span><button data-phone>${business.phoneDisplay}</button><button data-whatsapp-general>WhatsApp</button><a href="${business.instagram}" target="_blank" rel="noopener noreferrer">Instagram / @panometal54</a><a href="${business.facebook}" target="_blank" rel="noopener noreferrer">Facebook sayfası</a></div><div><span>MENÜ</span><a href="#surec">Nasıl çalışır?</a><a href="#hakkimizda">Hakkımızda</a><a href="#sss">Sık sorulanlar</a><button data-open-quote>Fiyat sor</button></div></div>
   <div class="container footer-bottom"><span>© ${new Date().getFullYear()} PanoMetal54</span><span>panometal54</span></div>
 </footer>
 <div class="mobile-contact-bar"><button data-phone>${icons.phone}<span>Ara</span></button><button data-open-quote>${icons.spark}<span>Fiyat Sor</span></button><button data-whatsapp-general>${icons.whatsapp}<span>WhatsApp</span></button></div>
@@ -294,8 +294,8 @@ const useContact = (kind, message = "") => {
 };
 
 document.querySelectorAll("[data-phone]").forEach(btn => btn.addEventListener("click", () => useContact("phone")));
-document.querySelectorAll("[data-whatsapp-general]").forEach(btn => btn.addEventListener("click", () => useContact("whatsapp", "Merhaba Özcan Usta, bir metal iş için bilgi ve fiyat almak istiyorum.")));
-document.querySelectorAll("[data-whatsapp-photo]").forEach(btn => btn.addEventListener("click", () => useContact("whatsapp", "Merhaba Özcan Usta, yaptırmak istediğim işin fotoğrafını ve yaklaşık ölçülerini göndermek istiyorum.")));
+document.querySelectorAll("[data-whatsapp-general]").forEach(btn => btn.addEventListener("click", () => useContact("whatsapp", "Merhaba Özcan Usta, bir metal iş için bilgi ve fiyat almak istiyorum. Uygun olduğunuzda dönüş yapabilir misiniz?")));
+document.querySelectorAll("[data-whatsapp-photo]").forEach(btn => btn.addEventListener("click", () => useContact("whatsapp", "Merhaba Özcan Usta, yaptırmak istediğim işin fotoğrafını ve yaklaşık ölçülerini göndermek istiyorum. Uygun olduğunuzda dönüş yapabilir misiniz?")));
 
 let selectedQuickChoice = "Su sayacı panosu";
 document.querySelector("#quickChoices").addEventListener("click", e => {
@@ -346,7 +346,7 @@ quoteBody.addEventListener("click", e => {
   if (e.target.closest("[data-prev-step]")) { captureInputs(); quote.step = Math.max(0, quote.step - 1); saveQuote(); renderQuote(); return; }
   if (e.target.closest("[data-submit-quote]")) {
     captureInputs();
-    const message = `Merhaba Özcan Usta, fiyat almak istiyorum.\n\nİş türü: ${quote.productType}\nKullanım alanı: ${quote.usage || "-"}\nYaklaşık ölçü: ${quote.width || "-"} × ${quote.height || "-"} × ${quote.depth || "-"} cm\nAdet: ${quote.quantity || "1"}\nDetay: ${quote.details || "-"}\nAd soyad: ${quote.name || "-"}\nTelefon: ${quote.phone || "-"}\nİlçe: ${quote.district || "-"}\nİletişim tercihi: ${quote.contact || "WhatsApp"}\n\nFotoğrafı bu mesajın ardından göndereceğim.`;
+    const message = `Merhaba Özcan Usta, fiyat almak istiyorum.\n\nTalep edilen iş: ${quote.productType}\nKullanım alanı: ${quote.usage || "Belirtilmedi"}\nYaklaşık ölçü: ${quote.width || "-"} x ${quote.height || "-"} x ${quote.depth || "-"} cm\nAdet: ${quote.quantity || "1"}\nProje detayı: ${quote.details || "Belirtilmedi"}\nMüşteri adı: ${quote.name || "Belirtilmedi"}\nTelefon: ${quote.phone || "Belirtilmedi"}\nİlçe / Konum: ${quote.district || "Belirtilmedi"}\nTercih edilen iletişim: ${quote.contact || "WhatsApp"}\n\nFotoğrafı bu mesajın hemen ardından göndereceğim.`;
     closeModals();
     useContact("whatsapp", message);
   }
