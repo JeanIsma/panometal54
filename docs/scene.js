@@ -1,4 +1,4 @@
-﻿const PALETTE = {
+const PALETTE = {
   mistTop: "#eef3f2",
   mistBottom: "#d7e0df",
   paper: "#f7f5ef",
@@ -14,10 +14,10 @@
 };
 
 const STAGES = [
-  { id: "01", title: "Ä°htiyaÃ§", subtitle: "FotoÄŸraf ve talep", x: 0 },
-  { id: "02", title: "Ã–lÃ§Ã¼ & Plan", subtitle: "Malzeme ve hazÄ±rlÄ±k", x: 470 },
-  { id: "03", title: "Ãœretim", subtitle: "Kesim ve kaynak", x: 940 },
-  { id: "04", title: "Teslim", subtitle: "Montaj ve sonuÃ§", x: 1410 }
+  { id: "01", title: "İhtiyaç", subtitle: "Fotoğraf ve talep", x: 0 },
+  { id: "02", title: "Ölçü & Plan", subtitle: "Malzeme ve hazırlık", x: 470 },
+  { id: "03", title: "Üretim", subtitle: "Kesim ve kaynak", x: 940 },
+  { id: "04", title: "Teslim", subtitle: "Montaj ve sonuç", x: 1410 }
 ];
 
 const clamp = (v, min = 0, max = 1) => Math.max(min, Math.min(max, v));
@@ -227,7 +227,7 @@ function drawMeasureArrows(ctx, x, y, scale, pulse) {
   ctx.globalAlpha = 1;
   ctx.font = "700 10px Inter, Arial, sans-serif";
   ctx.textAlign = "center";
-  ctx.fillText("Ã–LÃ‡Ãœ", 0, -9);
+  ctx.fillText("ÖLÇÜ", 0, -9);
   ctx.restore();
 }
 
@@ -639,7 +639,7 @@ export function create3DExperience(canvas, { onReady } = {}) {
     ctx.fillStyle = PALETTE.ink;
     ctx.font = "700 10px Inter, Arial, sans-serif";
     ctx.textAlign = "right";
-    ctx.fillText("KAYDIRDIKÃ‡A ÃœRETÄ°M SÃœRECÄ° Ä°LERLER", width - 36, 54);
+    ctx.fillText("KAYDIRDIKÇA ÜRETİM SÜRECİ İLERLER", width - 36, 54);
     ctx.fillStyle = PALETTE.orange;
     ctx.fillRect(width - 242, 64, 206 * progress, 3);
     ctx.fillStyle = "rgba(17,19,17,.12)";

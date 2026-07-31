@@ -1,4 +1,4 @@
-﻿export const business = {
+export const business = {
   name: "PanoMetal54",
   domain: "https://panometal54.com",
   phoneDisplay: "0544 833 75 90",
@@ -8,40 +8,40 @@
   facebook: "https://www.facebook.com/profile.php?id=61592117717828",
   email: "",
   city: "Sakarya",
-  country: "TÃ¼rkiye",
-  serviceArea: "Sakarya ve Ã§evresi",
+  country: "Türkiye",
+  serviceArea: "Sakarya ve çevresi",
   experienceYears: 40,
-  tagline: "Su sayacÄ± panosu, metal dolap, raf sistemi, kapÄ±, korkuluk ve Ã¶zel kaynak iÅŸleri"
+  tagline: "Su sayacı panosu, metal dolap, raf sistemi, kapı, korkuluk ve özel kaynak işleri"
 };
 
 export const featuredProjects = [
   {
     id: "su-sayac-panosu",
-    title: "Su SayacÄ± Panosu",
+    title: "Su Sayacı Panosu",
     category: "Pano & Koruma",
-    eyebrow: "GerÃ§ek tamamlanmÄ±ÅŸ iÅŸ",
-    description: "DÄ±ÅŸ ortamda sayaÃ§ ve tesisatÄ± korumak iÃ§in Ã¼retilmiÅŸ dayanÄ±klÄ± metal pano Ã§Ã¶zÃ¼mÃ¼.",
-    tags: ["Kilitli", "DÄ±ÅŸ mekÃ¢n", "Ã–zel Ã¶lÃ§Ã¼"],
+    eyebrow: "Gerçek tamamlanmış iş",
+    description: "Dış ortamda sayaç ve tesisatı korumak için üretilmiş dayanıklı metal pano çözümü.",
+    tags: ["Kilitli", "Dış mekân", "Özel ölçü"],
     image: "./images/projects/water-panel-main.jpg",
     imagePosition: "center"
   },
   {
     id: "dekoratif-kapi",
-    title: "Dekoratif BahÃ§e KapÄ±sÄ±",
-    category: "KapÄ± & GÃ¼venlik",
+    title: "Dekoratif Bahçe Kapısı",
+    category: "Kapı & Güvenlik",
     eyebrow: "Lazer desenli uygulama",
-    description: "ÅžÄ±k gÃ¶rÃ¼nÃ¼m ve dayanÄ±klÄ±lÄ±ÄŸÄ± bir arada sunan dekoratif metal bahÃ§e kapÄ±sÄ±.",
-    tags: ["Desenli", "Ã–zel Ã¼retim", "GiriÅŸ kapÄ±sÄ±"],
+    description: "Şık görünüm ve dayanıklılığı bir arada sunan dekoratif metal bahçe kapısı.",
+    tags: ["Desenli", "Özel üretim", "Giriş kapısı"],
     image: "./images/projects/gate-decorative.jpg",
     imagePosition: "center"
   },
   {
     id: "metal-raf",
     title: "Metal Raf Sistemi",
-    category: "AtÃ¶lye & Depo",
-    eyebrow: "TaÅŸÄ±ma ve depolama iÃ§in",
-    description: "Tekerlekli bÃ¼yÃ¼k metal raf sistemi; atÃ¶lye, Ã¼retim alanÄ± ve depo kullanÄ±mÄ± iÃ§in uygundur.",
-    tags: ["Tekerlekli", "SaÄŸlam gÃ¶vde", "Depolama"],
+    category: "Atölye & Depo",
+    eyebrow: "Taşıma ve depolama için",
+    description: "Tekerlekli büyük metal raf sistemi; atölye, üretim alanı ve depo kullanımı için uygundur.",
+    tags: ["Tekerlekli", "Sağlam gövde", "Depolama"],
     image: "./images/projects/rack-system.jpg",
     imagePosition: "center"
   },
@@ -49,29 +49,29 @@ export const featuredProjects = [
     id: "metal-dolap",
     title: "Metal Dolap",
     category: "Dolap & Muhafaza",
-    eyebrow: "Ä°Ã§ raflÄ± dolap Ã§Ã¶zÃ¼mÃ¼",
-    description: "AtÃ¶lye, bina ve teknik alanlarda kullanÄ±labilecek iÃ§ raflÄ± dayanÄ±klÄ± metal dolap.",
-    tags: ["RaflÄ±", "Kilitli", "Teknik kullanÄ±m"],
+    eyebrow: "İç raflı dolap çözümü",
+    description: "Atölye, bina ve teknik alanlarda kullanılabilecek iç raflı dayanıklı metal dolap.",
+    tags: ["Raflı", "Kilitli", "Teknik kullanım"],
     image: "./images/projects/cabinet-black.jpg",
     imagePosition: "center"
   },
   {
     id: "bahce-kamelya",
-    title: "BahÃ§e Kamelya ve Oturma AlanÄ±",
-    category: "BahÃ§e Ä°ÅŸleri",
-    eyebrow: "BahÃ§eye Ã¶zel Ã¼retim",
-    description: "BahÃ§e kullanÄ±mÄ±na uygun metal taÅŸÄ±yÄ±cÄ±lÄ± oturma ve gÃ¶lgelik Ã§Ã¶zÃ¼mÃ¼.",
-    tags: ["BahÃ§e", "Oturma alanÄ±", "Ã–zel yapÄ±"],
+    title: "Bahçe Kamelya ve Oturma Alanı",
+    category: "Bahçe İşleri",
+    eyebrow: "Bahçeye özel üretim",
+    description: "Bahçe kullanımına uygun metal taşıyıcılı oturma ve gölgelik çözümü.",
+    tags: ["Bahçe", "Oturma alanı", "Özel yapı"],
     image: "./images/projects/hero-gazebo.jpg",
     imagePosition: "center"
   },
   {
     id: "baca-muhafaza",
-    title: "Baca MuhafazasÄ±",
-    category: "Ã–zel ParÃ§a",
-    eyebrow: "Paslanmaz Ã¶zel parÃ§a",
-    description: "DoÄŸalgaz soba bacasÄ± iÃ§in Ã¼retilmiÅŸ koruyucu ve temiz gÃ¶rÃ¼nÃ¼mlÃ¼ paslanmaz Ã§Ã¶zÃ¼m.",
-    tags: ["Paslanmaz", "Ã–zel parÃ§a", "Muhafaza"],
+    title: "Baca Muhafazası",
+    category: "Özel Parça",
+    eyebrow: "Paslanmaz özel parça",
+    description: "Doğalgaz soba bacası için üretilmiş koruyucu ve temiz görünümlü paslanmaz çözüm.",
+    tags: ["Paslanmaz", "Özel parça", "Muhafaza"],
     image: "./images/projects/chimney-guard.jpg",
     imagePosition: "center"
   }
@@ -80,50 +80,50 @@ export const featuredProjects = [
 export const serviceCards = [
   {
     id: "su-panolari",
-    title: "Su SayacÄ± PanolarÄ±",
-    category: "Pano Ãœretimi",
-    description: "Duvar boÅŸluÄŸuna, sayaÃ§ Ã¶lÃ§Ã¼sÃ¼ne ve kullanÄ±m ihtiyacÄ±na gÃ¶re metal sayaÃ§ kapak ve panolarÄ±.",
-    tags: ["Ã–zel Ã¶lÃ§Ã¼", "Kapak", "Koruma"],
+    title: "Su Sayacı Panoları",
+    category: "Pano Üretimi",
+    description: "Duvar boşluğuna, sayaç ölçüsüne ve kullanım ihtiyacına göre metal sayaç kapak ve panoları.",
+    tags: ["Özel ölçü", "Kapak", "Koruma"],
     image: "./images/projects/water-panel-installed.jpg"
   },
   {
     id: "metal-dolaplar",
     title: "Metal Dolap ve Muhafazalar",
     category: "Dolap Sistemleri",
-    description: "Ä°Ã§ raflÄ±, kilitli veya teknik kullanÄ±ma uygun metal dolap ve muhafaza Ã§Ã¶zÃ¼mleri.",
-    tags: ["RaflÄ±", "Kilitli", "DayanÄ±klÄ±"],
+    description: "İç raflı, kilitli veya teknik kullanıma uygun metal dolap ve muhafaza çözümleri.",
+    tags: ["Raflı", "Kilitli", "Dayanıklı"],
     image: "./images/projects/cabinet-white.jpg"
   },
   {
     id: "raf-cozumleri",
-    title: "Raf ve Depolama Ã‡Ã¶zÃ¼mleri",
+    title: "Raf ve Depolama Çözümleri",
     category: "Raf Sistemleri",
-    description: "AtÃ¶lye, Ã¼retim ve depo alanlarÄ± iÃ§in tekerlekli veya sabit metal raf sistemleri.",
-    tags: ["Depo", "AtÃ¶lye", "Tekerlekli"],
+    description: "Atölye, üretim ve depo alanları için tekerlekli veya sabit metal raf sistemleri.",
+    tags: ["Depo", "Atölye", "Tekerlekli"],
     image: "./images/projects/rack-system.jpg"
   },
   {
     id: "kapi-korkuluk",
-    title: "KapÄ±, Korkuluk ve GÃ¼venlik Ä°ÅŸleri",
+    title: "Kapı, Korkuluk ve Güvenlik İşleri",
     category: "Dekoratif Metal",
-    description: "BahÃ§e kapÄ±sÄ±, giriÅŸ korkuluÄŸu ve dekoratif gÃ¼venlik uygulamalarÄ±.",
-    tags: ["Desenli", "GÃ¼venlik", "Dekoratif"],
+    description: "Bahçe kapısı, giriş korkuluğu ve dekoratif güvenlik uygulamaları.",
+    tags: ["Desenli", "Güvenlik", "Dekoratif"],
     image: "./images/projects/railing-gate.jpg"
   },
   {
     id: "bahce-yapilari",
-    title: "BahÃ§e Metal YapÄ±larÄ±",
-    category: "BahÃ§e UygulamalarÄ±",
-    description: "Kamelya, oturma alanÄ± ve bahÃ§eye Ã¶zel metal taÅŸÄ±yÄ±cÄ±lÄ± Ã§Ã¶zÃ¼mler.",
-    tags: ["Kamelya", "BahÃ§e", "Ã–zel Ã¼retim"],
+    title: "Bahçe Metal Yapıları",
+    category: "Bahçe Uygulamaları",
+    description: "Kamelya, oturma alanı ve bahçeye özel metal taşıyıcılı çözümler.",
+    tags: ["Kamelya", "Bahçe", "Özel üretim"],
     image: "./images/projects/hero-gazebo.jpg"
   },
   {
     id: "sehpa-stand",
     title: "Tekerlekli Sehpa ve Stand",
-    category: "Ã–zel Ãœretim",
-    description: "Dondurucu sehpasÄ± gibi zeminden yÃ¼kseltilmiÅŸ, tekerlekli ve ihtiyaca gÃ¶re Ã¼retilen standlar.",
-    tags: ["Paslanmaz", "Tekerlekli", "Ã–zel Ã¶lÃ§Ã¼"],
+    category: "Özel Üretim",
+    description: "Dondurucu sehpası gibi zeminden yükseltilmiş, tekerlekli ve ihtiyaca göre üretilen standlar.",
+    tags: ["Paslanmaz", "Tekerlekli", "Özel ölçü"],
     image: "./images/projects/freezer-stand.jpg"
   }
 ];

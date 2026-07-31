@@ -1,4 +1,4 @@
-﻿class Lenis {
+class Lenis {
   constructor() {}
   raf() {}
   scrollTo(target, { offset = 0 } = {}) {
@@ -34,8 +34,8 @@ const projectCard = (project, index) => `
 <article class="inspiration-card reveal ${index === 0 ? "featured" : ""}" data-product-id="${project.id}" data-product-type="featured">
   <div class="card-image-wrap">
     <img src="${project.image}" alt="${project.title}" loading="${index < 2 ? "eager" : "lazy"}" decoding="async" style="object-position:${project.imagePosition || "center"}">
-    <span class="concept-label">GERÃ‡EK PROJE</span>
-    <button class="image-quote" data-quick-product="${project.title}"><span>Bu iÅŸe benzer fiyat sor</span>${icons.arrow}</button>
+    <span class="concept-label">GERÇEK PROJE</span>
+    <button class="image-quote" data-quick-product="${project.title}"><span>Bu işe benzer fiyat sor</span>${icons.arrow}</button>
   </div>
   <div class="card-body">
     <div class="card-meta"><span>${String(index + 1).padStart(2, "0")}</span><span>${project.category}</span></div>
@@ -59,8 +59,8 @@ const solutionCard = (product, index) => `
 </article>`;
 
 app.innerHTML = `
-<a class="skip-link" href="#main">Ä°Ã§eriÄŸe geÃ§</a>
-<div class="loader" id="loader" aria-label="Site yÃ¼kleniyor">
+<a class="skip-link" href="#main">İçeriğe geç</a>
+<div class="loader" id="loader" aria-label="Site yükleniyor">
   <div class="loader-logo">${brandMark}</div>
   <div class="loader-name">PANOMETAL54</div>
   <div class="loader-line"><span id="loaderBar"></span></div>
@@ -68,22 +68,22 @@ app.innerHTML = `
 <header class="site-header" id="siteHeader">
   <a class="brand" href="#top" aria-label="PanoMetal54 ana sayfa">
     <span class="brand-mark">${brandMark}</span>
-    <span class="brand-copy"><strong>PANOMETAL54</strong><small>METAL PANO & KAYNAK Ä°ÅžLERÄ° Â· SAKARYA</small></span>
+    <span class="brand-copy"><strong>PANOMETAL54</strong><small>METAL PANO & KAYNAK İŞLERİ · SAKARYA</small></span>
   </a>
-  <nav class="desktop-nav" aria-label="Ana menÃ¼">
+  <nav class="desktop-nav" aria-label="Ana menü">
     <a href="#projeler">Projeler</a>
     <a href="#hizmetler">Hizmetler</a>
-    <a href="#surec">NasÄ±l Ã‡alÄ±ÅŸÄ±r?</a>
-    <a href="#hakkimizda">HakkÄ±mÄ±zda</a>
+    <a href="#surec">Nasıl Çalışır?</a>
+    <a href="#hakkimizda">Hakkımızda</a>
   </nav>
   <div class="header-actions">
     <button class="button button-ghost hide-small" data-open-quote>Fiyat Sor</button>
     <button class="button button-dark" data-whatsapp-general>${icons.whatsapp}<span>WhatsApp</span></button>
-    <button class="menu-toggle" id="menuToggle" aria-label="MenÃ¼yÃ¼ aÃ§" aria-expanded="false"><i></i><i></i></button>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menüyü aç" aria-expanded="false"><i></i><i></i></button>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#projeler">Projeler</a><a href="#hizmetler">Hizmetler</a><a href="#surec">NasÄ±l Ã‡alÄ±ÅŸÄ±r?</a><a href="#hakkimizda">HakkÄ±mÄ±zda</a><a href="#sss">SÄ±k Sorulanlar</a>
-    <button class="button button-orange" data-open-quote>Ãœcretsiz fiyat gÃ¶rÃ¼ÅŸmesi</button>
+    <a href="#projeler">Projeler</a><a href="#hizmetler">Hizmetler</a><a href="#surec">Nasıl Çalışır?</a><a href="#hakkimizda">Hakkımızda</a><a href="#sss">Sık Sorulanlar</a>
+    <button class="button button-orange" data-open-quote>Ücretsiz fiyat görüşmesi</button>
   </div>
 </header>
 <main id="main">
@@ -91,35 +91,35 @@ app.innerHTML = `
     <div class="hero-photo" aria-hidden="true">
       <img src="./images/projects/hero-gazebo.jpg" alt="" fetchpriority="high">
       <div class="hero-photo-overlay"></div>
-      <div class="hero-photo-caption"><span></span>GERÃ‡EK Ä°Åž FOTOÄžRAFI</div>
+      <div class="hero-photo-caption"><span></span>GERÇEK İŞ FOTOĞRAFI</div>
     </div>
     <div class="hero-content container">
       <div class="hero-copy-block">
-        <div class="hero-badge"><span></span>Sakaryaâ€™da gerÃ§ek Ã¼retim iÅŸleri</div>
-        <h1>PanoMetal54 ile<br><em>gerÃ§ek metal Ã§Ã¶zÃ¼mler.</em></h1>
-        <p class="hero-lead">Bu sitede yalnÄ±zca gerÃ§ek iÅŸ fotoÄŸraflarÄ±mÄ±zdan gelen hizmetler yer alÄ±r: su sayacÄ± panosu, metal dolap, raf sistemi, kapÄ± ve korkuluk, bahÃ§e metal iÅŸleri, baca muhafazasÄ± ve Ã¶zel Ã¼retim kaynak iÅŸleri.</p>
+        <div class="hero-badge"><span></span>Sakarya’da gerçek üretim işleri</div>
+        <h1>PanoMetal54 ile<br><em>gerçek metal çözümler.</em></h1>
+        <p class="hero-lead">Bu sitede yalnızca gerçek iş fotoğraflarımızdan gelen hizmetler yer alır: su sayacı panosu, metal dolap, raf sistemi, kapı ve korkuluk, bahçe metal işleri, baca muhafazası ve özel üretim kaynak işleri.</p>
         <div class="hero-actions">
-          <button class="button button-orange button-large" data-open-quote>FotoÄŸraf gÃ¶nder, fiyat sor ${icons.arrow}</button>
+          <button class="button button-orange button-large" data-open-quote>Fotoğraf gönder, fiyat sor ${icons.arrow}</button>
           <button class="button button-light button-large" data-phone>${icons.phone} Hemen ara</button>
         </div>
-        <p class="hero-note">Ä°nsanlar bize en hÄ±zlÄ± ÅŸekilde WhatsApp Ã¼zerinden ulaÅŸsÄ±n diye butonlar aktif bÄ±rakÄ±ldÄ±.</p>
+        <p class="hero-note">İnsanlar bize en hızlı şekilde WhatsApp üzerinden ulaşsın diye butonlar aktif bırakıldı.</p>
         <div class="social-inline"><a href="${business.instagram}" target="_blank" rel="noopener noreferrer">${icons.instagram}<span>Instagram / panometal54</span></a><a href="${business.facebook}" target="_blank" rel="noopener noreferrer">${icons.facebook}<span>Facebook / panometal54</span></a></div>
       </div>
       <aside class="hero-quote-card">
-        <div class="quote-card-top"><span>HIZLI TEKLÄ°F</span><strong>60 saniye</strong></div>
-        <h2>Hangi iÅŸ iÃ§in fiyat istiyorsunuz?</h2>
+        <div class="quote-card-top"><span>HIZLI TEKLİF</span><strong>60 saniye</strong></div>
+        <h2>Hangi iş için fiyat istiyorsunuz?</h2>
         <div class="quick-choices" id="quickChoices">
-          ${["Su sayacÄ± panosu", "Metal dolap / pano", "KapÄ± / korkuluk", "Raf sistemi", "BahÃ§e metal iÅŸi", "Ã–zel Ã¼retim parÃ§a"].map((v, i) => `<button class="quick-choice ${i === 0 ? "active" : ""}" data-choice="${v}">${v}<span>+</span></button>`).join("")}
+          ${["Su sayacı panosu", "Metal dolap / pano", "Kapı / korkuluk", "Raf sistemi", "Bahçe metal işi", "Özel üretim parça"].map((v, i) => `<button class="quick-choice ${i === 0 ? "active" : ""}" data-choice="${v}">${v}<span>+</span></button>`).join("")}
         </div>
         <button class="button button-dark full" id="quickQuoteButton">Devam et ${icons.arrow}</button>
-        <div class="quote-assurance"><span>${icons.measure}</span><p>YaklaÅŸÄ±k Ã¶lÃ§Ã¼ veya telefon fotoÄŸrafÄ± ilk deÄŸerlendirme iÃ§in yeterlidir.</p></div>
+        <div class="quote-assurance"><span>${icons.measure}</span><p>Yaklaşık ölçü veya telefon fotoğrafı ilk değerlendirme için yeterlidir.</p></div>
       </aside>
     </div>
     <div class="hero-trustbar">
       <div class="container trustbar-inner">
-        <div><strong>${business.experienceYears} yÄ±l</strong><span>Kaynak ve metal tecrÃ¼besi</span></div>
-        <div><strong>GerÃ§ek iÅŸler</strong><span>Sadece gÃ¶nderdiÄŸiniz fotoÄŸraflardaki hizmetler</span></div>
-        <div><strong>WhatsApp Ã¶ncelikli</strong><span>HÄ±zlÄ± dÃ¶nÃ¼ÅŸ iÃ§in</span></div>
+        <div><strong>${business.experienceYears} yıl</strong><span>Kaynak ve metal tecrübesi</span></div>
+        <div><strong>Gerçek işler</strong><span>Sadece gönderdiğiniz fotoğraflardaki hizmetler</span></div>
+        <div><strong>WhatsApp öncelikli</strong><span>Hızlı dönüş için</span></div>
         <div><strong>${business.city}</strong><span>${business.serviceArea}</span></div>
       </div>
     </div>
@@ -128,42 +128,42 @@ app.innerHTML = `
   <section class="section intro-strip">
     <div class="container intro-strip-grid">
       <div class="section-label reveal">PANOMETAL54</div>
-      <div class="intro-strip-copy reveal"><h2>HazÄ±r katalog deÄŸil.<br>GerÃ§ek iÅŸ fotoÄŸrafÄ± var,<br><span>aynÄ± Ã§izgide Ã¼retim var.</span></h2></div>
-      <div class="intro-strip-text reveal"><p>Bu sitedeki tÃ¼m hizmet alanlarÄ± doÄŸrudan paylaÅŸtÄ±ÄŸÄ±nÄ±z fotoÄŸraflara gÃ¶re dÃ¼zenlendi. Yani burada gÃ¶rmediÄŸiniz ayrÄ± bir servis eklenmedi. Ä°nsanlar gÃ¶rdÃ¼ÄŸÃ¼ iÅŸ Ã¼zerinden karar verebilir.</p><button class="text-link" data-open-quote>Projenizi WhatsApp'tan gÃ¶nderin ${icons.arrow}</button></div>
+      <div class="intro-strip-copy reveal"><h2>Hazır katalog değil.<br>Gerçek iş fotoğrafı var,<br><span>aynı çizgide üretim var.</span></h2></div>
+      <div class="intro-strip-text reveal"><p>Bu sitedeki tüm hizmet alanları doğrudan paylaştığınız fotoğraflara göre düzenlendi. Yani burada görmediğiniz ayrı bir servis eklenmedi. İnsanlar gördüğü iş üzerinden karar verebilir.</p><button class="text-link" data-open-quote>Projenizi WhatsApp'tan gönderin ${icons.arrow}</button></div>
     </div>
   </section>
 
   <section class="section inspiration-section" id="projeler">
     <div class="container">
       <div class="section-heading reveal">
-        <div><span class="section-label">GERÃ‡EK Ä°ÅžLERÄ°MÄ°Z</span><h2>FotoÄŸraflardan seÃ§ilen<br>en iyi gÃ¶rÃ¼nen iÅŸler.</h2></div>
-        <p>Bu bÃ¶lÃ¼mde yalnÄ±zca sizden gelen iÅŸ fotoÄŸraflarÄ± kullanÄ±ldÄ±. ZiyaretÃ§iler burada gerÃ§ek Ã¼retim Ã¶rneklerini gÃ¶rÃ¼r.</p>
+        <div><span class="section-label">GERÇEK İŞLERİMİZ</span><h2>Fotoğraflardan seçilen<br>en iyi görünen işler.</h2></div>
+        <p>Bu bölümde yalnızca sizden gelen iş fotoğrafları kullanıldı. Ziyaretçiler burada gerçek üretim örneklerini görür.</p>
       </div>
       <div class="inspiration-grid">${featuredProjects.map(projectCard).join("")}</div>
-      <div class="inspiration-cta reveal"><div><span>${icons.spark}</span><p>BeÄŸendiÄŸiniz iÅŸin benzerini istiyorsanÄ±z fotoÄŸrafÄ±nÄ±zÄ± gÃ¶nderin.</p></div><button class="button button-dark" data-whatsapp-photo>WhatsAppâ€™tan fotoÄŸraf gÃ¶nder ${icons.arrow}</button></div>
+      <div class="inspiration-cta reveal"><div><span>${icons.spark}</span><p>Beğendiğiniz işin benzerini istiyorsanız fotoğrafınızı gönderin.</p></div><button class="button button-dark" data-whatsapp-photo>WhatsApp’tan fotoğraf gönder ${icons.arrow}</button></div>
     </div>
   </section>
 
   <section class="section solutions-section" id="hizmetler">
     <div class="container">
       <div class="section-heading light reveal">
-        <div><span class="section-label">SUNDUÄžUMUZ HÄ°ZMETLER</span><h2>FotoÄŸraflarda gÃ¶rÃ¼nen<br>iÅŸ gruplarÄ±.</h2></div>
-        <p>Su sayacÄ± panolarÄ±, metal dolaplar, raf sistemleri, kapÄ± ve korkuluk, bahÃ§e iÅŸleri, baca muhafazasÄ± ve Ã¶zel stand Ã§Ã¶zÃ¼mleri.</p>
+        <div><span class="section-label">SUNDUĞUMUZ HİZMETLER</span><h2>Fotoğraflarda görünen<br>iş grupları.</h2></div>
+        <p>Su sayacı panoları, metal dolaplar, raf sistemleri, kapı ve korkuluk, bahçe işleri, baca muhafazası ve özel stand çözümleri.</p>
       </div>
       <div class="solutions-grid">${serviceCards.map(solutionCard).join("")}</div>
     </div>
   </section>
 
-  <section class="journey" id="surec" aria-label="PanoMetal54 Ã¼retim sÃ¼reci">
+  <section class="journey" id="surec" aria-label="PanoMetal54 üretim süreci">
     <div class="journey-sticky">
-      <canvas id="world-canvas" aria-label="Fikirden montaja uzanan Ã¼Ã§ boyutlu Ã¼retim sÃ¼reci"></canvas>
+      <canvas id="world-canvas" aria-label="Fikirden montaja uzanan üç boyutlu üretim süreci"></canvas>
       <div class="journey-shade"></div>
-      <div class="journey-title"><span class="section-label">FÄ°KÄ°RDEN MONTAJA</span><h2>DÃ¶rt adÄ±mda<br>net ve saÄŸlam sÃ¼reÃ§.</h2></div>
+      <div class="journey-title"><span class="section-label">FİKİRDEN MONTAJA</span><h2>Dört adımda<br>net ve sağlam süreç.</h2></div>
       <div class="process-panels">
-        <article class="process-panel" data-process="0"><span class="process-index">01</span><div><h3>FotoÄŸraf veya ihtiyacÄ± alÄ±yoruz.</h3><p>MÃ¼ÅŸteri iÅŸi anlatÄ±r, varsa mevcut alanÄ± veya istediÄŸi Ã¼rÃ¼nÃ¼ fotoÄŸrafla gÃ¶nderir.</p></div></article>
-        <article class="process-panel" data-process="1"><span class="process-index">02</span><div><h3>Ã–lÃ§Ã¼ ve plan belirlenir.</h3><p>ÃœrÃ¼nÃ¼n Ã¶lÃ§Ã¼sÃ¼, kullanÄ±m amacÄ± ve hangi malzemeyle Ã¼retileceÄŸi netleÅŸtirilir.</p></div></article>
-        <article class="process-panel" data-process="2"><span class="process-index">03</span><div><h3>Ãœretim ve kaynak yapÄ±lÄ±r.</h3><p>Kesim, hazÄ±rlÄ±k, kaynak ve montaja hazÄ±r hale getirme aÅŸamalarÄ± tamamlanÄ±r.</p></div></article>
-        <article class="process-panel" data-process="3"><span class="process-index">04</span><div><h3>Teslim ve kurulum.</h3><p>Ä°ÅŸ tamamlandÄ±ktan sonra teslim edilir, gerekiyorsa yerine montajÄ± yapÄ±lÄ±r.</p></div></article>
+        <article class="process-panel" data-process="0"><span class="process-index">01</span><div><h3>Fotoğraf veya ihtiyacı alıyoruz.</h3><p>Müşteri işi anlatır, varsa mevcut alanı veya istediği ürünü fotoğrafla gönderir.</p></div></article>
+        <article class="process-panel" data-process="1"><span class="process-index">02</span><div><h3>Ölçü ve plan belirlenir.</h3><p>Ürünün ölçüsü, kullanım amacı ve hangi malzemeyle üretileceği netleştirilir.</p></div></article>
+        <article class="process-panel" data-process="2"><span class="process-index">03</span><div><h3>Üretim ve kaynak yapılır.</h3><p>Kesim, hazırlık, kaynak ve montaja hazır hale getirme aşamaları tamamlanır.</p></div></article>
+        <article class="process-panel" data-process="3"><span class="process-index">04</span><div><h3>Teslim ve kurulum.</h3><p>İş tamamlandıktan sonra teslim edilir, gerekiyorsa yerine montajı yapılır.</p></div></article>
       </div>
       <div class="journey-progress">${[0, 1, 2, 3].map((_, i) => `<span data-dot="${i}"></span>`).join("")}</div>
     </div>
@@ -172,47 +172,47 @@ app.innerHTML = `
   <section class="section master-section" id="hakkimizda">
     <div class="container master-grid">
       <div class="master-visual reveal">
-        <img src="./images/projects/gate-decorative.jpg" alt="PanoMetal54 dekoratif metal kapÄ± iÅŸi" loading="lazy">
-        <div class="master-visual-card"><span>${business.experienceYears}</span><p>yÄ±llÄ±k kaynak ve metal iÅŸleme tecrÃ¼besi</p></div>
+        <img src="./images/projects/gate-decorative.jpg" alt="PanoMetal54 dekoratif metal kapı işi" loading="lazy">
+        <div class="master-visual-card"><span>${business.experienceYears}</span><p>yıllık kaynak ve metal işleme tecrübesi</p></div>
       </div>
       <div class="master-copy reveal">
         <span class="section-label">NEDEN PANOMETAL54?</span>
-        <h2>GÃ¶sterdiÄŸimiz iÅŸ,<br>yapabildiÄŸimiz iÅŸtir.</h2>
-        <p class="large-copy">PanoMetal54 iÃ§in site, paylaÅŸÄ±lan gerÃ§ek iÅŸ fotoÄŸraflarÄ± Ã¼zerinden yeniden dÃ¼zenlendi. BÃ¶ylece ziyaretÃ§i doÄŸrudan hangi iÅŸleri yaptÄ±ÄŸÄ±nÄ±zÄ± gÃ¶rÃ¼r ve size WhatsApp Ã¼zerinden hÄ±zlÄ±ca ulaÅŸÄ±r.</p>
+        <h2>Gösterdiğimiz iş,<br>yapabildiğimiz iştir.</h2>
+        <p class="large-copy">PanoMetal54 için site, paylaşılan gerçek iş fotoğrafları üzerinden yeniden düzenlendi. Böylece ziyaretçi doğrudan hangi işleri yaptığınızı görür ve size WhatsApp üzerinden hızlıca ulaşır.</p>
         <div class="master-points">
-          <div><strong>01</strong><span>FotoÄŸraflarda olan iÅŸ kollarÄ± Ã¶n plana Ã§Ä±karÄ±ldÄ±.</span></div>
-          <div><strong>02</strong><span>WhatsApp iletiÅŸimi ana kanal olarak bÄ±rakÄ±ldÄ±.</span></div>
-          <div><strong>03</strong><span>Instagram ve Facebook hesabÄ± marka gÃ¼veni iÃ§in gÃ¶sterildi.</span></div>
-          <div><strong>04</strong><span>Su panosu, dolap, raf, kapÄ± ve Ã¶zel parÃ§alar aÃ§Ä±kÃ§a ayrÄ±ldÄ±.</span></div>
+          <div><strong>01</strong><span>Fotoğraflarda olan iş kolları ön plana çıkarıldı.</span></div>
+          <div><strong>02</strong><span>WhatsApp iletişimi ana kanal olarak bırakıldı.</span></div>
+          <div><strong>03</strong><span>Instagram ve Facebook hesabı marka güveni için gösterildi.</span></div>
+          <div><strong>04</strong><span>Su panosu, dolap, raf, kapı ve özel parçalar açıkça ayrıldı.</span></div>
         </div>
-        <div class="master-actions"><button class="button button-orange" data-open-quote>WhatsApp ile gÃ¶rÃ¼ÅŸÃ¼n ${icons.arrow}</button><button class="button button-outline-dark" data-phone>${icons.phone} Telefon</button></div>
+        <div class="master-actions"><button class="button button-orange" data-open-quote>WhatsApp ile görüşün ${icons.arrow}</button><button class="button button-outline-dark" data-phone>${icons.phone} Telefon</button></div>
       </div>
     </div>
   </section>
 
   <section class="section conversion-section">
     <div class="container conversion-grid">
-      <div class="conversion-copy reveal"><span class="section-label">FÄ°YAT ALMAK KOLAY</span><h2>FotoÄŸrafÄ± yolla,<br>Ã¶lÃ§Ã¼yÃ¼ yaz,<br>WhatsApp'tan konuÅŸalÄ±m.</h2></div>
+      <div class="conversion-copy reveal"><span class="section-label">FİYAT ALMAK KOLAY</span><h2>Fotoğrafı yolla,<br>ölçüyü yaz,<br>WhatsApp'tan konuşalım.</h2></div>
       <div class="conversion-steps">
-        <article class="reveal"><span>1</span><div><h3>Ä°ÅŸi seÃ§</h3><p>Sitedeki gerÃ§ek iÅŸlerden size en yakÄ±n olanÄ± seÃ§in.</p></div></article>
-        <article class="reveal"><span>2</span><div><h3>FotoÄŸraf ve Ã¶lÃ§Ã¼ gÃ¶nder</h3><p>Yeni iÅŸinizin fotoÄŸrafÄ±nÄ± veya alan gÃ¶rÃ¼ntÃ¼sÃ¼nÃ¼ paylaÅŸÄ±n.</p></div></article>
-        <article class="reveal"><span>3</span><div><h3>FiyatÄ± Ã¶ÄŸren</h3><p>Malzeme, Ã¶lÃ§Ã¼ ve teslimat detayÄ±na gÃ¶re hÄ±zlÄ± deÄŸerlendirme alÄ±n.</p></div></article>
+        <article class="reveal"><span>1</span><div><h3>İşi seç</h3><p>Sitedeki gerçek işlerden size en yakın olanı seçin.</p></div></article>
+        <article class="reveal"><span>2</span><div><h3>Fotoğraf ve ölçü gönder</h3><p>Yeni işinizin fotoğrafını veya alan görüntüsünü paylaşın.</p></div></article>
+        <article class="reveal"><span>3</span><div><h3>Fiyatı öğren</h3><p>Malzeme, ölçü ve teslimat detayına göre hızlı değerlendirme alın.</p></div></article>
       </div>
-      <div class="conversion-action reveal"><button class="button button-white button-large" data-open-quote>Åžimdi fiyat isteyin ${icons.arrow}</button><p>Ã–ncelikli iletiÅŸim kanalÄ± WhatsApp'tÄ±r.</p></div>
+      <div class="conversion-action reveal"><button class="button button-white button-large" data-open-quote>Şimdi fiyat isteyin ${icons.arrow}</button><p>Öncelikli iletişim kanalı WhatsApp'tır.</p></div>
     </div>
   </section>
 
   <section class="section faq-section" id="sss">
     <div class="container faq-grid">
-      <div class="faq-title reveal"><span class="section-label">SIK SORULANLAR</span><h2>Ä°letiÅŸime geÃ§meden<br>Ã¶nce merak edilenler.</h2><button class="text-link" data-open-quote>Fiyat istemek iÃ§in baÅŸla ${icons.arrow}</button></div>
+      <div class="faq-title reveal"><span class="section-label">SIK SORULANLAR</span><h2>İletişime geçmeden<br>önce merak edilenler.</h2><button class="text-link" data-open-quote>Fiyat istemek için başla ${icons.arrow}</button></div>
       <div class="faq-list reveal" id="faqList">
         ${[
-          ["Sitede olmayan bir iÅŸi de sorabilir miyim?", "Bu versiyonda yalnÄ±zca gÃ¶nderdiÄŸiniz fotoÄŸraflardan Ã§Ä±kan iÅŸ gruplarÄ± Ã¶ne Ã§Ä±karÄ±ldÄ±. Yine de benzer metal iÅŸleri WhatsApp Ã¼zerinden sorabilirsiniz."],
-          ["FiyatÄ± nasÄ±l Ã¶ÄŸrenebilirim?", "YaklaÅŸÄ±k Ã¶lÃ§Ã¼, adet ve iÅŸin fotoÄŸrafÄ± gÃ¶nderildiÄŸinde ilk deÄŸerlendirme yapÄ±labilir. Nihai fiyat malzeme ve detaylara gÃ¶re netleÅŸir."],
-          ["WhatsApp ile mi ulaÅŸmak gerekiyor?", "Evet, sitede WhatsApp Ã¶ncelikli iletiÅŸim kanalÄ± olarak bÄ±rakÄ±ldÄ±. Telefon ve sosyal medya baÄŸlantÄ±larÄ± da ayrÄ±ca gÃ¶sterilebilir."],
-          ["Instagram ve Facebook hesabÄ± var mÄ±?", "Evet, marka adÄ± panometal54 olarak sosyal medya hesaplarÄ± gÃ¶sterildi. Ancak fiyat ve iÅŸ takibi iÃ§in en hÄ±zlÄ± yol WhatsApp'tÄ±r."],
-          ["Su sayacÄ± panosu ve metal dolap Ã¶zel Ã¶lÃ§Ã¼ olur mu?", "Evet. GÃ¶rseldeki Ã¶rnekler gibi pano, dolap ve koruma Ã§Ã¶zÃ¼mleri Ã¶lÃ§Ã¼ye gÃ¶re deÄŸerlendirilebilir."],
-          ["Sakarya dÄ±ÅŸÄ±nda iÅŸ alÄ±yor musunuz?", "Ä°ÅŸin bÃ¼yÃ¼klÃ¼ÄŸÃ¼ne ve teslimat durumuna gÃ¶re Ã§evre bÃ¶lgeler ayrÄ±ca konuÅŸulabilir."]
+          ["Sitede olmayan bir işi de sorabilir miyim?", "Bu versiyonda yalnızca gönderdiğiniz fotoğraflardan çıkan iş grupları öne çıkarıldı. Yine de benzer metal işleri WhatsApp üzerinden sorabilirsiniz."],
+          ["Fiyatı nasıl öğrenebilirim?", "Yaklaşık ölçü, adet ve işin fotoğrafı gönderildiğinde ilk değerlendirme yapılabilir. Nihai fiyat malzeme ve detaylara göre netleşir."],
+          ["WhatsApp ile mi ulaşmak gerekiyor?", "Evet, sitede WhatsApp öncelikli iletişim kanalı olarak bırakıldı. Telefon ve sosyal medya bağlantıları da ayrıca gösterilebilir."],
+          ["Instagram ve Facebook hesabı var mı?", "Evet, marka adı panometal54 olarak sosyal medya hesapları gösterildi. Ancak fiyat ve iş takibi için en hızlı yol WhatsApp'tır."],
+          ["Su sayacı panosu ve metal dolap özel ölçü olur mu?", "Evet. Görseldeki örnekler gibi pano, dolap ve koruma çözümleri ölçüye göre değerlendirilebilir."],
+          ["Sakarya dışında iş alıyor musunuz?", "İşin büyüklüğüne ve teslimat durumuna göre çevre bölgeler ayrıca konuşulabilir."]
         ].map((item, i) => `<article class="faq-item ${i === 0 ? "open" : ""}"><button class="faq-question" aria-expanded="${i === 0}"><span>${item[0]}</span><i>+</i></button><div class="faq-answer"><p>${item[1]}</p></div></article>`).join("")}
       </div>
     </div>
@@ -221,32 +221,32 @@ app.innerHTML = `
   <section class="final-cta">
     <div class="final-spark" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
     <div class="container final-cta-inner">
-      <span class="section-label">PANOMETAL54 Ä°LE Ä°LETÄ°ÅžÄ°M</span>
-      <h2>Ä°htiyacÄ±nÄ±zdaki metal iÅŸi<br><em>WhatsApp'tan konuÅŸalÄ±m.</em></h2>
-      <p>FotoÄŸrafÄ±, Ã§izimi veya yaklaÅŸÄ±k Ã¶lÃ§Ã¼yÃ¼ gÃ¶nderin. UygunluÄŸu ve fiyatÄ± doÄŸrudan PanoMetal54 ile konuÅŸun.</p>
-      <div class="final-actions"><button class="button button-orange button-large" data-whatsapp-photo>${icons.whatsapp} WhatsAppâ€™tan fotoÄŸraf gÃ¶nder</button><button class="button button-light button-large" data-phone>${icons.phone} Hemen ara</button></div>
-      <div class="final-info"><span>${business.city}, ${business.country}</span><span>${business.experienceYears} yÄ±llÄ±k tecrÃ¼be</span><span>GerÃ§ek iÅŸ fotoÄŸraflarÄ±yla sunum</span></div>
+      <span class="section-label">PANOMETAL54 İLE İLETİŞİM</span>
+      <h2>İhtiyacınızdaki metal işi<br><em>WhatsApp'tan konuşalım.</em></h2>
+      <p>Fotoğrafı, çizimi veya yaklaşık ölçüyü gönderin. Uygunluğu ve fiyatı doğrudan PanoMetal54 ile konuşun.</p>
+      <div class="final-actions"><button class="button button-orange button-large" data-whatsapp-photo>${icons.whatsapp} WhatsApp’tan fotoğraf gönder</button><button class="button button-light button-large" data-phone>${icons.phone} Hemen ara</button></div>
+      <div class="final-info"><span>${business.city}, ${business.country}</span><span>${business.experienceYears} yıllık tecrübe</span><span>Gerçek iş fotoğraflarıyla sunum</span></div>
       <div class="social-inline center"><a href="${business.instagram}" target="_blank" rel="noopener noreferrer">${icons.instagram}<span>Instagram</span></a><a href="${business.facebook}" target="_blank" rel="noopener noreferrer">${icons.facebook}<span>Facebook</span></a></div>
     </div>
   </section>
 </main>
 <footer class="site-footer">
-  <div class="container footer-top"><a class="brand footer-brand" href="#top"><span class="brand-mark">${brandMark}</span><span class="brand-copy"><strong>PANOMETAL54</strong><small>METAL PANO & KAYNAK Ä°ÅžLERÄ°</small></span></a><p>GerÃ§ek iÅŸ fotoÄŸraflarÄ±yla gÃ¼ven veren, WhatsApp odaklÄ± metal Ã¼retim sitesi.</p></div>
-  <div class="container footer-grid"><div><span>HÄ°ZMET</span><a href="#projeler">Su sayacÄ± panolarÄ±</a><a href="#hizmetler">Metal dolaplar</a><a href="#hizmetler">KapÄ± ve korkuluk</a><a href="#hizmetler">Raf ve Ã¶zel Ã¼retim</a></div><div><span>Ä°LETÄ°ÅžÄ°M</span><button data-phone>${business.phoneDisplay}</button><button data-whatsapp-general>WhatsApp</button><a href="${business.instagram}" target="_blank" rel="noopener noreferrer">Instagram / panometal54</a><a href="${business.facebook}" target="_blank" rel="noopener noreferrer">Facebook / panometal54</a></div><div><span>MENÃœ</span><a href="#surec">NasÄ±l Ã§alÄ±ÅŸÄ±r?</a><a href="#hakkimizda">HakkÄ±mÄ±zda</a><a href="#sss">SÄ±k sorulanlar</a><button data-open-quote>Fiyat sor</button></div></div>
-  <div class="container footer-bottom"><span>Â© ${new Date().getFullYear()} PanoMetal54</span><span>panometal54</span></div>
+  <div class="container footer-top"><a class="brand footer-brand" href="#top"><span class="brand-mark">${brandMark}</span><span class="brand-copy"><strong>PANOMETAL54</strong><small>METAL PANO & KAYNAK İŞLERİ</small></span></a><p>Gerçek iş fotoğraflarıyla güven veren, WhatsApp odaklı metal üretim sitesi.</p></div>
+  <div class="container footer-grid"><div><span>HİZMET</span><a href="#projeler">Su sayacı panoları</a><a href="#hizmetler">Metal dolaplar</a><a href="#hizmetler">Kapı ve korkuluk</a><a href="#hizmetler">Raf ve özel üretim</a></div><div><span>İLETİŞİM</span><button data-phone>${business.phoneDisplay}</button><button data-whatsapp-general>WhatsApp</button><a href="${business.instagram}" target="_blank" rel="noopener noreferrer">Instagram / panometal54</a><a href="${business.facebook}" target="_blank" rel="noopener noreferrer">Facebook / panometal54</a></div><div><span>MENÜ</span><a href="#surec">Nasıl çalışır?</a><a href="#hakkimizda">Hakkımızda</a><a href="#sss">Sık sorulanlar</a><button data-open-quote>Fiyat sor</button></div></div>
+  <div class="container footer-bottom"><span>© ${new Date().getFullYear()} PanoMetal54</span><span>panometal54</span></div>
 </footer>
 <div class="mobile-contact-bar"><button data-phone>${icons.phone}<span>Ara</span></button><button data-open-quote>${icons.spark}<span>Fiyat Sor</span></button><button data-whatsapp-general>${icons.whatsapp}<span>WhatsApp</span></button></div>
 
 <div class="modal-backdrop" id="quoteModal" aria-hidden="true">
   <div class="quote-modal" role="dialog" aria-modal="true" aria-labelledby="quoteTitle">
     <button class="modal-close" data-close-modal aria-label="Kapat">${icons.close}</button>
-    <div class="quote-modal-head"><span>ÃœCRETSÄ°Z Ã–N DEÄžERLENDÄ°RME</span><h2 id="quoteTitle">Projenizi kÄ±saca anlatÄ±n.</h2><p>Formun sonunda bilgileriniz WhatsApp mesajÄ±na dÃ¶nÃ¼ÅŸtÃ¼rÃ¼lÃ¼r. FotoÄŸrafÄ± WhatsApp iÃ§inde ekleyebilirsiniz.</p></div>
+    <div class="quote-modal-head"><span>ÜCRETSİZ ÖN DEĞERLENDİRME</span><h2 id="quoteTitle">Projenizi kısaca anlatın.</h2><p>Formun sonunda bilgileriniz WhatsApp mesajına dönüştürülür. Fotoğrafı WhatsApp içinde ekleyebilirsiniz.</p></div>
     <div class="quote-progress"><span id="quoteProgressBar"></span></div>
     <div class="quote-body" id="quoteBody"></div>
   </div>
 </div>
 <div class="modal-backdrop" id="contactWarning" aria-hidden="true">
-  <div class="small-modal" role="dialog" aria-modal="true"><button class="modal-close" data-close-modal aria-label="Kapat">${icons.close}</button><span class="section-label">Ä°LETÄ°ÅžÄ°M BÄ°LGÄ°SÄ° GEREKÄ°YOR</span><h2>Telefon ve WhatsApp numarasÄ±nÄ± ekleyin.</h2><p>Website yayÄ±na alÄ±nmadan Ã¶nce <code>src/config.js</code> dosyasÄ±ndaki <strong>phone</strong> ve <strong>whatsapp</strong> alanlarÄ±nÄ± doldurun. Åžu anda numara uydurulmadÄ±ÄŸÄ± iÃ§in iletiÅŸim butonu devre dÄ±ÅŸÄ±dÄ±r.</p><button class="button button-dark full" data-close-modal>Tamam</button></div>
+  <div class="small-modal" role="dialog" aria-modal="true"><button class="modal-close" data-close-modal aria-label="Kapat">${icons.close}</button><span class="section-label">İLETİŞİM BİLGİSİ GEREKİYOR</span><h2>Telefon ve WhatsApp numarasını ekleyin.</h2><p>Website yayına alınmadan önce <code>src/config.js</code> dosyasındaki <strong>phone</strong> ve <strong>whatsapp</strong> alanlarını doldurun. Şu anda numara uydurulmadığı için iletişim butonu devre dışıdır.</p><button class="button button-dark full" data-close-modal>Tamam</button></div>
 </div>
 <div class="cursor-dot"></div><div class="cursor-ring"></div>
 `;
@@ -293,10 +293,10 @@ const useContact = (kind, message = "") => {
 };
 
 document.querySelectorAll("[data-phone]").forEach(btn => btn.addEventListener("click", () => useContact("phone")));
-document.querySelectorAll("[data-whatsapp-general]").forEach(btn => btn.addEventListener("click", () => useContact("whatsapp", "Merhaba Ã–zcan Usta, bir metal iÅŸ iÃ§in bilgi ve fiyat almak istiyorum.")));
-document.querySelectorAll("[data-whatsapp-photo]").forEach(btn => btn.addEventListener("click", () => useContact("whatsapp", "Merhaba Ã–zcan Usta, yaptÄ±rmak istediÄŸim iÅŸin fotoÄŸrafÄ±nÄ± ve yaklaÅŸÄ±k Ã¶lÃ§Ã¼lerini gÃ¶ndermek istiyorum.")));
+document.querySelectorAll("[data-whatsapp-general]").forEach(btn => btn.addEventListener("click", () => useContact("whatsapp", "Merhaba Özcan Usta, bir metal iş için bilgi ve fiyat almak istiyorum.")));
+document.querySelectorAll("[data-whatsapp-photo]").forEach(btn => btn.addEventListener("click", () => useContact("whatsapp", "Merhaba Özcan Usta, yaptırmak istediğim işin fotoğrafını ve yaklaşık ölçülerini göndermek istiyorum.")));
 
-let selectedQuickChoice = "Su sayacÄ± panosu";
+let selectedQuickChoice = "Su sayacı panosu";
 document.querySelector("#quickChoices").addEventListener("click", e => {
   const button = e.target.closest("[data-choice]");
   if (!button) return;
@@ -318,15 +318,15 @@ function renderQuote() {
   quoteProgressBar.style.width = `${((quote.step + 1) / 4) * 100}%`;
   const stepHeader = `<div class="quote-step-label">ADIM ${quote.step + 1} / 4</div>`;
   if (quote.step === 0) {
-    const options = ["Su sayacÄ± panosu", "Metal dolap / pano", "KapÄ± / korkuluk", "Raf sistemi", "BahÃ§e metal iÅŸi", "Baca muhafazasÄ±", "Ã–zel Ã¼retim parÃ§a"];
-    quoteBody.innerHTML = `${stepHeader}<h3>Hangi iÅŸ iÃ§in fiyat istiyorsunuz?</h3><div class="modal-choice-grid">${options.map(v => `<button class="modal-choice ${quote.productType === v ? "selected" : ""}" data-set-product="${v}"><span>${v}</span><i>+</i></button>`).join("")}</div><button class="button button-dark full" data-next-step ${quote.productType ? "" : "disabled"}>Devam et ${icons.arrow}</button>`;
+    const options = ["Su sayacı panosu", "Metal dolap / pano", "Kapı / korkuluk", "Raf sistemi", "Bahçe metal işi", "Baca muhafazası", "Özel üretim parça"];
+    quoteBody.innerHTML = `${stepHeader}<h3>Hangi iş için fiyat istiyorsunuz?</h3><div class="modal-choice-grid">${options.map(v => `<button class="modal-choice ${quote.productType === v ? "selected" : ""}" data-set-product="${v}"><span>${v}</span><i>+</i></button>`).join("")}</div><button class="button button-dark full" data-next-step ${quote.productType ? "" : "disabled"}>Devam et ${icons.arrow}</button>`;
   } else if (quote.step === 1) {
-    const usages = ["Ev", "Apartman", "BahÃ§e", "Ä°ÅŸ yeri", "AtÃ¶lye / depo", "DÄ±ÅŸ mekÃ¢n", "DiÄŸer"];
-    quoteBody.innerHTML = `${stepHeader}<h3>Bu iÅŸ nerede kullanÄ±lacak?</h3><div class="modal-choice-grid compact">${usages.map(v => `<button class="modal-choice ${quote.usage === v ? "selected" : ""}" data-set-usage="${v}"><span>${v}</span><i>+</i></button>`).join("")}</div><div class="modal-nav"><button class="button button-ghost" data-prev-step>Geri</button><button class="button button-dark" data-next-step ${quote.usage ? "" : "disabled"}>Devam et ${icons.arrow}</button></div>`;
+    const usages = ["Ev", "Apartman", "Bahçe", "İş yeri", "Atölye / depo", "Dış mekân", "Diğer"];
+    quoteBody.innerHTML = `${stepHeader}<h3>Bu iş nerede kullanılacak?</h3><div class="modal-choice-grid compact">${usages.map(v => `<button class="modal-choice ${quote.usage === v ? "selected" : ""}" data-set-usage="${v}"><span>${v}</span><i>+</i></button>`).join("")}</div><div class="modal-nav"><button class="button button-ghost" data-prev-step>Geri</button><button class="button button-dark" data-next-step ${quote.usage ? "" : "disabled"}>Devam et ${icons.arrow}</button></div>`;
   } else if (quote.step === 2) {
-    quoteBody.innerHTML = `${stepHeader}<h3>YaklaÅŸÄ±k Ã¶lÃ§Ã¼ ve detay</h3><p class="form-help">BilmiyorsanÄ±z Ã¶lÃ§Ã¼leri boÅŸ bÄ±rakabilirsiniz.</p><div class="form-grid three"><label>GeniÅŸlik (cm)<input name="width" inputmode="decimal" value="${quote.width}"></label><label>YÃ¼kseklik (cm)<input name="height" inputmode="decimal" value="${quote.height}"></label><label>Derinlik (cm)<input name="depth" inputmode="decimal" value="${quote.depth}"></label></div><div class="form-grid"><label>Adet<input name="quantity" inputmode="numeric" value="${quote.quantity}"></label><label class="wide">AÃ§Ä±klama<textarea name="details" rows="4" placeholder="Ä°ÅŸi kÄ±saca anlatÄ±n...">${quote.details}</textarea></label></div><div class="upload-hint">${icons.spark}<div><strong>FotoÄŸrafÄ± son adÄ±m sonrasÄ± WhatsApp mesajÄ±na ekleyebilirsiniz.</strong><span>Telefon ekran gÃ¶rÃ¼ntÃ¼sÃ¼ de olur.</span></div></div><div class="modal-nav"><button class="button button-ghost" data-prev-step>Geri</button><button class="button button-dark" data-next-step>Devam et ${icons.arrow}</button></div>`;
+    quoteBody.innerHTML = `${stepHeader}<h3>Yaklaşık ölçü ve detay</h3><p class="form-help">Bilmiyorsanız ölçüleri boş bırakabilirsiniz.</p><div class="form-grid three"><label>Genişlik (cm)<input name="width" inputmode="decimal" value="${quote.width}"></label><label>Yükseklik (cm)<input name="height" inputmode="decimal" value="${quote.height}"></label><label>Derinlik (cm)<input name="depth" inputmode="decimal" value="${quote.depth}"></label></div><div class="form-grid"><label>Adet<input name="quantity" inputmode="numeric" value="${quote.quantity}"></label><label class="wide">Açıklama<textarea name="details" rows="4" placeholder="İşi kısaca anlatın...">${quote.details}</textarea></label></div><div class="upload-hint">${icons.spark}<div><strong>Fotoğrafı son adım sonrası WhatsApp mesajına ekleyebilirsiniz.</strong><span>Telefon ekran görüntüsü de olur.</span></div></div><div class="modal-nav"><button class="button button-ghost" data-prev-step>Geri</button><button class="button button-dark" data-next-step>Devam et ${icons.arrow}</button></div>`;
   } else {
-    quoteBody.innerHTML = `${stepHeader}<h3>Size nasÄ±l ulaÅŸalÄ±m?</h3><div class="form-grid"><label>Ad soyad<input name="name" value="${quote.name}" autocomplete="name"></label><label>Telefon<input name="phone" value="${quote.phone}" inputmode="tel" autocomplete="tel"></label><label>Ä°lÃ§e<input name="district" value="${quote.district}" autocomplete="address-level2"></label><label>Ä°letiÅŸim tercihi<select name="contact"><option ${quote.contact === "WhatsApp" ? "selected" : ""}>WhatsApp</option><option ${quote.contact === "Telefon" ? "selected" : ""}>Telefon</option></select></label></div><div class="quote-summary"><span>Talep Ã¶zeti</span><strong>${quote.productType}</strong><p>${quote.usage}${quote.width || quote.height ? ` Â· ${quote.width || "-"} Ã— ${quote.height || "-"} Ã— ${quote.depth || "-"} cm` : ""}</p></div><div class="modal-nav"><button class="button button-ghost" data-prev-step>Geri</button><button class="button button-orange" data-submit-quote>${icons.whatsapp} WhatsApp mesajÄ±nÄ± hazÄ±rla</button></div>`;
+    quoteBody.innerHTML = `${stepHeader}<h3>Size nasıl ulaşalım?</h3><div class="form-grid"><label>Ad soyad<input name="name" value="${quote.name}" autocomplete="name"></label><label>Telefon<input name="phone" value="${quote.phone}" inputmode="tel" autocomplete="tel"></label><label>İlçe<input name="district" value="${quote.district}" autocomplete="address-level2"></label><label>İletişim tercihi<select name="contact"><option ${quote.contact === "WhatsApp" ? "selected" : ""}>WhatsApp</option><option ${quote.contact === "Telefon" ? "selected" : ""}>Telefon</option></select></label></div><div class="quote-summary"><span>Talep özeti</span><strong>${quote.productType}</strong><p>${quote.usage}${quote.width || quote.height ? ` · ${quote.width || "-"} × ${quote.height || "-"} × ${quote.depth || "-"} cm` : ""}</p></div><div class="modal-nav"><button class="button button-ghost" data-prev-step>Geri</button><button class="button button-orange" data-submit-quote>${icons.whatsapp} WhatsApp mesajını hazırla</button></div>`;
   }
 }
 
@@ -345,7 +345,7 @@ quoteBody.addEventListener("click", e => {
   if (e.target.closest("[data-prev-step]")) { captureInputs(); quote.step = Math.max(0, quote.step - 1); saveQuote(); renderQuote(); return; }
   if (e.target.closest("[data-submit-quote]")) {
     captureInputs();
-    const message = `Merhaba Ã–zcan Usta, fiyat almak istiyorum.\n\nÄ°ÅŸ tÃ¼rÃ¼: ${quote.productType}\nKullanÄ±m alanÄ±: ${quote.usage || "-"}\nYaklaÅŸÄ±k Ã¶lÃ§Ã¼: ${quote.width || "-"} Ã— ${quote.height || "-"} Ã— ${quote.depth || "-"} cm\nAdet: ${quote.quantity || "1"}\nDetay: ${quote.details || "-"}\nAd soyad: ${quote.name || "-"}\nTelefon: ${quote.phone || "-"}\nÄ°lÃ§e: ${quote.district || "-"}\nÄ°letiÅŸim tercihi: ${quote.contact || "WhatsApp"}\n\nFotoÄŸrafÄ± bu mesajÄ±n ardÄ±ndan gÃ¶ndereceÄŸim.`;
+    const message = `Merhaba Özcan Usta, fiyat almak istiyorum.\n\nİş türü: ${quote.productType}\nKullanım alanı: ${quote.usage || "-"}\nYaklaşık ölçü: ${quote.width || "-"} × ${quote.height || "-"} × ${quote.depth || "-"} cm\nAdet: ${quote.quantity || "1"}\nDetay: ${quote.details || "-"}\nAd soyad: ${quote.name || "-"}\nTelefon: ${quote.phone || "-"}\nİlçe: ${quote.district || "-"}\nİletişim tercihi: ${quote.contact || "WhatsApp"}\n\nFotoğrafı bu mesajın ardından göndereceğim.`;
     closeModals();
     useContact("whatsapp", message);
   }
