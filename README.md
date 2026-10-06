@@ -10,7 +10,7 @@ No npm install or external dependencies are required. Run npm run build, then np
 
 Edit src/pages/*.html, src/partials/*.html, src/styles.css and src/main.js. Business details are in src/config.js. The build writes complete static HTML to dist/ and docs/. GitHub Pages publishes main, /docs; commit the regenerated docs files along with the source.
 
-All three pages contain their readable content and metadata before JavaScript runs. JavaScript enhances the mobile menu, photo lightbox and WhatsApp enquiry form. Enquiries are prepared on the visitor’s device; the website does not store them or send a message automatically. Visitors review and send their message in WhatsApp.
+All three pages contain their readable content and metadata before JavaScript runs. JavaScript enhances the two-product switch, photo lightbox and WhatsApp enquiry sheet. Mobile visitors have a fixed phone/WhatsApp bar and optional measurements. Enquiries are prepared on the visitor’s device; the website does not store them or send a message automatically. Visitors review and send their message in WhatsApp.
 
 ## Contact details
 
