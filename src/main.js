@@ -1,28 +1,39 @@
 (() => {
   'use strict';
-  const menu = document.querySelector('.menu-toggle');
-  const navigation = document.querySelector('#site-nav');
-  const setMenu = open => {
-    menu.setAttribute('aria-expanded', String(open));
-    navigation.classList.toggle('is-open', open);
-  };
-  menu.addEventListener('click', () => setMenu(menu.getAttribute('aria-expanded') !== 'true'));
-  navigation.addEventListener('click', event => {
-    if (event.target.closest('a')) setMenu(false);
-  });
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') {
-      setMenu(false); menu.focus();
-    }
-  });
   const quote = document.querySelector('#quote-dialog');
   const photo = document.querySelector('#photo-dialog');
-  const product = document.querySelector('#product');
-  product.value = document.body.dataset.product;
   const form = document.querySelector('#quote-form');
+  let selectedProduct = document.body.dataset.product;
+  const setQuoteProduct = value => {
+    for (const input of form.querySelectorAll('[name="product"]')) input.checked = input.value === value;
+  };
+  setQuoteProduct(selectedProduct);
+  const tabs = [...document.querySelectorAll('[data-product-tab]')];
+  const selectProduct = tab => {
+    for (const item of tabs) {
+      const active = item === tab;
+      item.setAttribute('aria-selected', String(active));
+      item.tabIndex = active ? 0 : -1;
+      const panel = document.getElementById(item.getAttribute('aria-controls'));
+      panel.hidden = !active;
+      panel.classList.toggle('is-entering', active);
+    }
+    selectedProduct = tab.dataset.productTab === 'gas' ? 'Doğalgaz panosu' : 'Su sayacı kapağı / panosu';
+  };
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => selectProduct(tab));
+    tab.addEventListener('keydown', event => {
+      let next;
+      if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+      if (event.key === 'ArrowLeft') next = (index + tabs.length - 1) % tabs.length;
+      if (event.key === 'Home') next = 0;
+      if (event.key === 'End') next = tabs.length - 1;
+      if (next !== undefined) { event.preventDefault(); selectProduct(tabs[next]); tabs[next].focus(); }
+    });
+  });
   document.querySelectorAll('[data-quote]').forEach(button => {
     button.addEventListener('click', () => {
-      if (button.dataset.quote) product.value = button.dataset.quote;
+      setQuoteProduct(button.dataset.quote || selectedProduct);
       quote.showModal();
     });
   });
@@ -39,9 +50,8 @@
     dialog.querySelector('[data-close]').addEventListener('click', () => dialog.close());
     dialog.addEventListener('click', event => {
       if (event.target === dialog) {
-        const bounds = dialog.getBoundingClientRect();
-        if (event.clientX < bounds.left || event.clientX > bounds.right ||
-            event.clientY < bounds.top || event.clientY > bounds.bottom) dialog.close();
+        const b = dialog.getBoundingClientRect();
+        if (event.clientX < b.left || event.clientX > b.right || event.clientY < b.top || event.clientY > b.bottom) dialog.close();
       }
     });
   });
@@ -58,7 +68,5 @@
     const phone = document.body.dataset.whatsapp.replace(/\D/g,'');
     window.location.assign('https://wa.me/'+phone+'?text='+encodeURIComponent(lines.join('\n')));
   });
-  document.querySelectorAll('[data-year]').forEach(element => {
-    element.textContent = String(new Date().getFullYear());
-  });
+  document.querySelectorAll('[data-year]').forEach(element => { element.textContent = String(new Date().getFullYear()); });
 })();

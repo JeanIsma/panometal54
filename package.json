@@ -1,7 +1,7 @@
 {
   "name": "panometal54-website",
   "private": true,
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Sakarya water-meter covers and natural-gas panels, with static Turkish product pages.",
   "scripts": {
     "start": "node server.cjs",

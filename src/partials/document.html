@@ -2,14 +2,14 @@
 <html lang="tr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#12263a">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f7f5">
   <meta name="description" content="{{description}}">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <title>{{title}}</title>
   <link rel="canonical" href="{{canonical}}">
-  <link rel="icon" type="image/png" href="{{base}}images/brand/favicon.png">
-  <link rel="stylesheet" href="{{base}}styles.css">
+  <link rel="icon" type="image/png" href="{{base}}images/brand/favicon.png?v={{assetVersion}}">
+  <link rel="stylesheet" href="{{base}}styles.css?v={{assetVersion}}">
   <meta property="og:locale" content="tr_TR">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Sayaç Kapak · PanoMetal54">
@@ -22,33 +22,24 @@
   <meta property="og:image:alt" content="Sayaç Kapak · PanoMetal54, Sakarya">
   <meta name="twitter:card" content="summary_large_image">
   <script type="application/ld+json">{{schema}}</script>
-  <script defer src="{{base}}main.js"></script>
+  <script defer src="{{base}}main.js?v={{assetVersion}}"></script>
 </head>
 <body data-whatsapp="{{whatsapp}}" data-product="{{defaultProduct}}">
-  <a class="skip-link" href="#main">İçeriğe geç</a>
-  {{header}}
-  <noscript><p class="container no-script">Fiyat görüşmek için <a href="https://wa.me/{{whatsapp}}">WhatsApp’tan yazın</a> veya <a href="tel:{{phone}}">{{phoneDisplay}}</a> numarasını arayın.</p></noscript>
-  <main id="main">{{content}}</main>
-  {{footer}}
-  <div class="mobile-contact" aria-label="Hızlı iletişim"><a href="tel:{{phone}}">Hemen ara</a><button type="button" class="button" data-quote>WhatsApp’tan fiyat sor</button></div>
-  <dialog class="quote-dialog" id="quote-dialog" aria-labelledby="quote-title">
-    <button type="button" class="close-dialog" data-close aria-label="Pencereyi kapat">×</button>
-    <p class="eyebrow">ÖZCAN USTA · PANOMETAL54</p>
-    <h2 id="quote-title">Ölçüyü paylaşın,<br>fiyatı konuşalım.</h2>
-    <p>Ürünü seçin. Biliyorsanız yaklaşık ölçüleri de ekleyin.</p>
-    <form id="quote-form">
-      <label for="product">Ürün</label>
-      <select id="product" name="product"><option>Su sayacı kapağı / panosu</option><option>Doğalgaz panosu</option></select>
-      <div class="measurement-fields"><div><label for="width">En (cm)</label><input id="width" name="width" type="number" min="1" max="10000" step="any" inputmode="decimal" placeholder="Örn. 60"></div><div><label for="height">Boy (cm)</label><input id="height" name="height" type="number" min="1" max="10000" step="any" inputmode="decimal" placeholder="Örn. 80"></div></div>
-      <label for="district">Sakarya ilçesi <span>(isteğe bağlı)</span></label><input id="district" name="district" autocomplete="address-level2" maxlength="80" placeholder="Örn. Adapazarı">
-      <label for="note">Kısaca ihtiyacınız <span>(isteğe bağlı)</span></label><textarea id="note" name="note" rows="3" maxlength="800" placeholder="Yeni kapak, mevcut kapağın yenilenmesi…"></textarea>
-      <p class="form-note">Fotoğrafınızı açılan WhatsApp görüşmesinde ekleyebilirsiniz. Bu form bilgilerinizi kaydetmez.</p>
-      <button class="button full-width" type="submit">WhatsApp’ta mesajı hazırla</button>
-    </form>
-  </dialog>
-  <dialog class="photo-dialog" id="photo-dialog" aria-label="Uygulama fotoğrafı">
-    <button type="button" class="close-dialog" data-close aria-label="Fotoğrafı kapat">×</button>
-    <img id="enlarged-photo" src="{{base}}images/projects/water-panel-main.jpg" alt="PanoMetal54 su sayacı panosu"><p id="photo-caption"></p>
-  </dialog>
-</body>
-</html>
+<a class="skip-link" href="#main">İçeriğe geç</a>
+{{header}}
+<main id="main">{{content}}</main>
+{{footer}}
+<div class="mobile-contact" aria-label="Hızlı iletişim"><div class="mobile-contact-inner"><a class="call-action" href="tel:{{phone}}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3H4a1 1 0 0 0-1 1c0 9.4 7.6 17 17 17a1 1 0 0 0 1-1v-3l-5-2-2 2a15 15 0 0 1-7-7l2-2-2-5Z"/></svg><span>Ara</span></a><button type="button" class="button button-blue" data-quote><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.7a8.5 8.5 0 0 1-12.8 7.4L3 20.5l1.4-4.6A8.5 8.5 0 1 1 20.5 11.7Z"/><path d="m8 7 1.5 2.5-1 1a8 8 0 0 0 4.5 4.5l1-1L16.5 15c-1 3-6 0-8-2s-4-5-.5-6Z"/></svg><span>WhatsApp’tan fiyat al</span></button></div></div>
+<noscript><p class="container no-script">Fiyat için <a href="https://wa.me/{{whatsapp}}">WhatsApp’tan yazın</a> veya <a href="tel:{{phone}}">{{phoneDisplay}}</a> numarasını arayın.</p></noscript>
+<dialog class="quote-dialog" id="quote-dialog" aria-labelledby="quote-title">
+  <div class="sheet-handle" aria-hidden="true"></div><button type="button" class="close-dialog" data-close aria-label="Pencereyi kapat">×</button>
+  <p class="eyebrow">ÖZCAN USTA İLE GÖRÜŞÜN</p><h2 id="quote-title">Ne yaptırmak<br>istiyorsunuz?</h2>
+  <form id="quote-form">
+    <fieldset class="quote-products"><legend>Ürün seçin</legend><label><input type="radio" name="product" value="Su sayacı kapağı / panosu" checked><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s-7 7.3-7 12a7 7 0 0 0 14 0c0-4.7-7-12-7-12Z"/></svg>Su sayacı kapağı</span></label><label><input type="radio" name="product" value="Doğalgaz panosu"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2c1 6-6 7-6 12a5 5 0 0 0 10 0c0-2-1-4-2-5 0 4-4 4-3 0 1-3 1-5 1-7Z"/></svg>Doğalgaz panosu</span></label></fieldset>
+    <details class="quote-measurements"><summary>Ölçü veya not ekle <span>İsteğe bağlı</span></summary><div class="measurement-fields"><div><label for="width">En (cm)</label><input id="width" name="width" type="number" min="1" max="10000" step="any" inputmode="decimal" placeholder="Örn. 60"></div><div><label for="height">Boy (cm)</label><input id="height" name="height" type="number" min="1" max="10000" step="any" inputmode="decimal" placeholder="Örn. 80"></div></div><label for="district">Sakarya ilçesi</label><input id="district" name="district" autocomplete="address-level2" maxlength="80" placeholder="Örn. Adapazarı"><label for="note">Notunuz</label><textarea id="note" name="note" rows="2" maxlength="800" placeholder="Yeni kapak, kapak yenileme…"></textarea></details>
+    <p class="form-note">Ölçüyü bilmiyorsanız sorun değil.<br>Fotoğrafınızı WhatsApp’ta ekleyebilirsiniz.</p>
+    <button class="button button-blue full-width" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.7a8.5 8.5 0 0 1-12.8 7.4L3 20.5l1.4-4.6A8.5 8.5 0 1 1 20.5 11.7Z"/><path d="m8 7 1.5 2.5-1 1a8 8 0 0 0 4.5 4.5l1-1L16.5 15c-1 3-6 0-8-2s-4-5-.5-6Z"/></svg>WhatsApp’a geç</button>
+  </form>
+</dialog>
+<dialog class="photo-dialog" id="photo-dialog" aria-label="Uygulama fotoğrafı"><button type="button" class="close-dialog" data-close aria-label="Fotoğrafı kapat">×</button><img id="enlarged-photo" src="{{base}}images/projects/water-panel-main.jpg" alt="PanoMetal54 su sayacı panosu"><p id="photo-caption"></p></dialog>
+</body></html>

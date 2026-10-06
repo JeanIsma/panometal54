@@ -2,6 +2,11 @@ const fs = require('node:fs');
 const path = require('node:path');
 const business = require('./src/config.js');
 const root = __dirname;
+const assetVersion = require('node:crypto').createHash('sha256')
+  .update(fs.readFileSync(path.join(root,'src/styles.css')))
+  .update(fs.readFileSync(path.join(root,'src/main.js')))
+  .update(fs.readFileSync(path.join(root,'public/images/brand/sayac-kapak-logo.png')))
+  .digest('hex').slice(0,10);
 const siteUrl = new URL(business.siteUrl);
 if (siteUrl.protocol !== 'https:') throw new Error('SITE_URL must use HTTPS.');
 if (!siteUrl.pathname.endsWith('/')) siteUrl.pathname += '/';
@@ -60,7 +65,7 @@ for (const output of ['dist','docs']) {
   for (const page of pages) {
     const canonical = new URL(page.slug,siteUrl).href;
     const values = {
-      base:page.slug?'../':'./', title:escapeHtml(page.title),
+      base:page.slug?'../':'./', assetVersion, title:escapeHtml(page.title),
       description:escapeHtml(page.description), canonical:escapeHtml(canonical),
       shareImage:escapeHtml(new URL('images/brand/social-preview.jpg',siteUrl).href),
       phone:business.phone, phoneDisplay:business.phoneDisplay, whatsapp:business.whatsapp,
