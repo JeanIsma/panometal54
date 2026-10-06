@@ -1,22 +1,6 @@
-# PanoMetal54 Final Scope
+# Sayaç Kapak · PanoMetal54
 
-The site is intentionally limited to service areas shown in the user's supplied photographs:
+Scope: su sayacı kapağı / su saati panosu and doğalgaz panosu only.
+Visual direction: precise industrial typography, navy and royal blue, white surfaces and real water-panel photographs. Sayaç Kapak is the display brand; PanoMetal54 remains the business identity.
 
-- Su sayacı panosu and meter protection panels
-- Metal cabinets and enclosures
-- Workshop and storage rack systems
-- Decorative gates and railings
-- Garden metal structures
-- Chimney guards and small custom metal parts
-- Wheeled stands and custom support frames
-
-The primary conversion action is WhatsApp.
-
-The production journey is scroll-driven:
-
-1. Customer request / photograph
-2. Measurement and planning
-3. Cutting, preparation and welding
-4. Delivery and installation
-
-The 3D scene uses a responsive orthographic camera, reduced mobile render resolution, fewer expensive shadows on mobile, and a reduced-motion fallback.
+Three static Turkish pages use consistent navigation, phone and WhatsApp contact, accessible modal enquiries, keyboard dismissal, image enlargement and native FAQ disclosures. Responsive mobile navigation and a compact fixed contact bar are included. Reduced-motion preferences are respected. There is no loading animation, 3D runtime, tracking dependency or fabricated product catalogue.

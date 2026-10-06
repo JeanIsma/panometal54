@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://panometal54.com/sitemap.xml

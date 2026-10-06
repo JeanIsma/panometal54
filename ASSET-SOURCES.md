@@ -1,18 +1,11 @@
-# PanoMetal54 image sources
+# Asset sources
 
-All project photographs in this package were supplied directly by the user for the PanoMetal54 website.
+The two water-meter enclosure photographs were supplied directly by the user for the original PanoMetal54 website and retained unchanged:
+- public/images/projects/water-panel-main.jpg
+- public/images/projects/water-panel-installed.jpg
 
-No stock product photography is used in the final website.
-No photographs are presented as work by another company.
+Unrelated metalwork photographs are removed from the published website. No stock or generated product photograph is presented as completed work. The natural-gas page uses typography because there is no verified natural-gas enclosure photo in the repository.
 
-Included project categories:
+The new Sayaç Kapak / PanoMetal54 logo was created with the built-in imagegen tool on 6 October 2026 using the user’s supplied droplet / meter / metal-cover reference. The transparent production logo, cropped favicon and white-background social preview are in public/images/brand/.
 
-- Su sayacı panosu
-- Metal dolap ve muhafaza
-- Metal raf sistemi
-- Dekoratif kapı ve korkuluk
-- Bahçe kamelya / metal yapı
-- Baca muhafazası
-- Tekerlekli özel stand
-
-The original photographs remain the user's responsibility to publish and use commercially.
+The separate brand-application mockup is illustrative, not a photograph of completed work. It is not included in the product gallery.

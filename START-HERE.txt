@@ -1,24 +1,12 @@
-PANOMETAL54 FINAL FIXED VERSION
-==============================
+PANOMETAL54 · SAYAÇ KAPAK
 
-1. Extract the ZIP to a normal Windows folder.
-2. Double-click START-PANOMETAL54.bat.
-3. Keep the black window open.
-4. The browser opens automatically at http://localhost:5173/
+Website: https://jeanisma.github.io/panometal54/
 
-If port 5173 is already occupied, the launcher tries 5174 through 5183 and opens the correct address automatically.
+Windows: double-click START-PANOMETAL54.bat.
+Source changes: edit src/, then double-click BUILD-WEBSITE.bat.
+GitHub Pages publishes the committed docs/ folder.
 
-This version does NOT run npm install and does NOT require Vite. Node.js is used only as a reliable local web server, so the starter no longer closes silently because of a dependency-install error.
-
-CONTACT
--------
-Phone / WhatsApp: +90 544 833 75 90
-Facebook: https://www.facebook.com/profile.php?id=61592117717828
-Instagram: https://instagram.com/panometal54
-
-The website brand is PanoMetal54. Prepared WhatsApp messages begin with "Merhaba Özcan Usta".
-
-EDITING
--------
-Edit files in the src folder, then run BUILD-WEBSITE.bat.
-Upload everything inside dist to public_html or httpdocs.
+Products: su sayacı kapağı / panosu and doğalgaz panosu only.
+Phone / WhatsApp: 0544 833 75 90.
+Instagram: @panometal54.
+Suggested domain to buy: sayac54.com (not purchased or connected).

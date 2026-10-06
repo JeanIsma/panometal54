@@ -1,1 +1,1 @@
-GitHub Pages uses this docs folder.
+Static website. GitHub Pages publishes main /docs.

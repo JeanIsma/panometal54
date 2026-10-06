@@ -1,66 +1,86 @@
-const fs = require('fs');
-const path = require('path');
-
+const fs = require('node:fs');
+const path = require('node:path');
+const business = require('./src/config.js');
 const root = __dirname;
-const src = path.join(root, 'src');
-const pub = path.join(root, 'public');
-const dist = path.join(root, 'dist');
-const docs = path.join(root, 'docs');
-
-function ensureDir(dir) { fs.mkdirSync(dir, { recursive: true }); }
-function removeDir(dir) { fs.rmSync(dir, { recursive: true, force: true }); }
-function copyFile(from, to) { ensureDir(path.dirname(to)); fs.copyFileSync(from, to); }
-function copyDir(from, to) {
-  if (!fs.existsSync(from)) return;
-  ensureDir(to);
-  for (const entry of fs.readdirSync(from, { withFileTypes: true })) {
-    const source = path.join(from, entry.name);
-    const target = path.join(to, entry.name);
-    if (entry.isDirectory()) copyDir(source, target);
-    else copyFile(source, target);
+const siteUrl = new URL(business.siteUrl);
+if (siteUrl.protocol !== 'https:') throw new Error('SITE_URL must use HTTPS.');
+if (!siteUrl.pathname.endsWith('/')) siteUrl.pathname += '/';
+const pages = [
+  {slug:'', file:'home.html', title:'Sakarya Su Sayacı Kapağı ve Doğalgaz Panosu | PanoMetal54',
+    description:'Sakarya’da su sayacı kapağı, su saati panosu ve doğalgaz panosu imalatı ve montajı. Ölçünüzü paylaşın, PanoMetal54 ile WhatsApp üzerinden fiyat görüşün.'},
+  {slug:'su-sayaci-kapagi/', file:'water.html', title:'Sakarya Su Sayacı Kapağı ve Su Saati Panosu | PanoMetal54',
+    description:'Sakarya’da ölçüye göre su sayacı kapağı ve su saati panosu. Uygulama fotoğraflarını inceleyin; ölçü ve fotoğrafla PanoMetal54’ten fiyat isteyin.',
+    label:'Su Sayacı Kapağı', service:'Su sayacı kapağı ve panosu imalatı ve montajı'},
+  {slug:'dogalgaz-panosu/', file:'gas.html', title:'Sakarya Doğalgaz Panosu ve Sayaç Dolabı | PanoMetal54',
+    description:'Sakarya’da sayaç ve tesisat yerleşimine göre doğalgaz panosu imalatı ve montajı. Ölçü ve fotoğrafınızı PanoMetal54 ile paylaşarak fiyat görüşün.',
+    label:'Doğalgaz Panosu', service:'Doğalgaz sayaç panosu imalatı ve montajı'}
+];
+const read = file => fs.readFileSync(path.join(root, 'src', file), 'utf8');
+const escapeHtml = value => String(value).replace(/[&<>"']/g, character =>
+  ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[character]));
+function interpolate(text, values) {
+  return text.replace(/\{\{(\w+)\}\}/g, (_, key) => {
+    if (!(key in values)) throw new Error('Missing template value: ' + key);
+    return values[key];
+  });
+}
+function schema(page, canonical) {
+  const graph = [{
+    '@type':'LocalBusiness', '@id':siteUrl.href+'#business',
+    name:business.name, alternateName:business.brand, url:siteUrl.href,
+    telephone:business.phone,
+    logo:new URL('images/brand/sayac-kapak-logo.png', siteUrl).href,
+    image:new URL('images/projects/water-panel-main.jpg', siteUrl).href,
+    description:'Sakarya’da su sayacı kapakları ve doğalgaz panoları imalatı ve montajı.',
+    address:{'@type':'PostalAddress', addressLocality:business.city, addressCountry:'TR'},
+    areaServed:{'@type':'City', name:business.city},
+    sameAs:[business.instagram,business.facebook],
+    knowsAbout:['Su sayacı kapağı','Su saati panosu','Doğalgaz panosu']
+  }, {
+    '@type':'WebSite', '@id':siteUrl.href+'#website', name:business.brand+' · '+business.name,
+    url:siteUrl.href, inLanguage:'tr-TR'
+  }];
+  if (page.service) graph.push({
+    '@type':'Service', name:page.label, serviceType:page.service, url:canonical,
+    provider:{'@id':siteUrl.href+'#business'}, areaServed:{'@type':'City', name:business.city}
+  }, {
+    '@type':'BreadcrumbList', itemListElement:[
+      {'@type':'ListItem', position:1, name:'Ana Sayfa', item:siteUrl.href},
+      {'@type':'ListItem', position:2, name:page.label, item:canonical}
+    ]
+  });
+  return JSON.stringify({'@context':'https://schema.org','@graph':graph}).replace(/</g,'\\u003c');
+}
+for (const output of ['dist','docs']) {
+  const directory = path.join(root,output);
+  fs.rmSync(directory,{recursive:true,force:true});
+  fs.mkdirSync(directory,{recursive:true});
+  fs.cpSync(path.join(root,'public'),directory,{recursive:true});
+  for (const file of ['styles.css','main.js']) fs.copyFileSync(path.join(root,'src',file),path.join(directory,file));
+  for (const page of pages) {
+    const canonical = new URL(page.slug,siteUrl).href;
+    const values = {
+      base:page.slug?'../':'./', title:escapeHtml(page.title),
+      description:escapeHtml(page.description), canonical:escapeHtml(canonical),
+      shareImage:escapeHtml(new URL('images/brand/social-preview.jpg',siteUrl).href),
+      phone:business.phone, phoneDisplay:business.phoneDisplay, whatsapp:business.whatsapp,
+      instagram:business.instagram, facebook:business.facebook,
+      waterCurrent:page.slug==='su-sayaci-kapagi/'?'aria-current="page"':'',
+      gasCurrent:page.slug==='dogalgaz-panosu/'?'aria-current="page"':'',
+      schema:schema(page,canonical),
+      defaultProduct:page.slug==='dogalgaz-panosu/'?'Doğalgaz panosu':'Su sayacı kapağı / panosu'
+    };
+    values.header = interpolate(read('partials/header.html'),values);
+    values.footer = interpolate(read('partials/footer.html'),values);
+    values.content = interpolate(read('pages/'+page.file),values);
+    const target = path.join(directory,page.slug,'index.html');
+    fs.mkdirSync(path.dirname(target),{recursive:true});
+    fs.writeFileSync(target,interpolate(read('partials/document.html'),values));
   }
+  const urls = pages.map(page=>'<url><loc>'+new URL(page.slug,siteUrl).href+'</loc></url>').join('\n');
+  fs.writeFileSync(path.join(directory,'sitemap.xml'),'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+urls+'\n</urlset>\n');
+  fs.writeFileSync(path.join(directory,'robots.txt'),'User-agent: *\nAllow: /\nSitemap: '+new URL('sitemap.xml',siteUrl).href+'\n');
+  fs.writeFileSync(path.join(directory,'.nojekyll'),'');
+  fs.writeFileSync(path.join(directory,'README-UPLOAD.txt'),'Static website. GitHub Pages publishes main /docs.\n');
 }
-function writeUtf8(file, content) {
-  ensureDir(path.dirname(file));
-  fs.writeFileSync(file, content, 'utf8');
-}
-function patchForStaticHosting(content) {
-  return content.replaceAll('"/images/', '"./images/').replaceAll("'/images/", "'./images/");
-}
-
-removeDir(dist);
-removeDir(docs);
-ensureDir(dist);
-ensureDir(docs);
-
-copyFile(path.join(src, 'styles.css'), path.join(dist, 'styles.css'));
-copyFile(path.join(src, 'styles.css'), path.join(docs, 'styles.css'));
-copyFile(path.join(src, 'config.js'), path.join(dist, 'config.js'));
-writeUtf8(path.join(docs, 'config.js'), patchForStaticHosting(fs.readFileSync(path.join(src, 'config.js'), 'utf8')));
-copyFile(path.join(src, 'scene.js'), path.join(dist, 'scene.js'));
-copyFile(path.join(src, 'scene.js'), path.join(docs, 'scene.js'));
-
-let main = fs.readFileSync(path.join(src, 'main.js'), 'utf8');
-main = main.replace('import "./styles.css";\n', '');
-writeUtf8(path.join(dist, 'main.js'), main);
-writeUtf8(path.join(docs, 'main.js'), patchForStaticHosting(main));
-
-let html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
-html = html.replace('</head>', '    <link rel="stylesheet" href="./styles.css" />\n  </head>');
-html = html.replace('<script type="module" src="/src/main.js"></script>', '<script type="module" src="./main.js"></script>');
-writeUtf8(path.join(dist, 'index.html'), html);
-writeUtf8(path.join(docs, 'index.html'), html);
-
-copyDir(path.join(pub, 'images'), path.join(dist, 'images'));
-copyDir(path.join(pub, 'images'), path.join(docs, 'images'));
-for (const file of ['robots.txt', 'sitemap.xml']) {
-  const from = path.join(pub, file);
-  if (fs.existsSync(from)) {
-    copyFile(from, path.join(dist, file));
-    copyFile(from, path.join(docs, file));
-  }
-}
-writeUtf8(path.join(docs, '.nojekyll'), '');
-writeUtf8(path.join(dist, 'README-UPLOAD.txt'), 'Upload the contents of this folder to your hosting root.');
-writeUtf8(path.join(docs, 'README-UPLOAD.txt'), 'GitHub Pages uses this docs folder.');
-console.log('Website built successfully in dist and docs folders.');
+console.log('Built 3 crawlable Turkish pages in dist/ and docs/. Canonical URL: '+siteUrl.href);
