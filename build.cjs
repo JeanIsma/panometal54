@@ -69,6 +69,7 @@ for (const output of ['dist','docs']) {
       description:escapeHtml(page.description), canonical:escapeHtml(canonical),
       shareImage:escapeHtml(new URL('images/brand/social-preview.jpg',siteUrl).href),
       phone:business.phone, phoneDisplay:business.phoneDisplay, whatsapp:business.whatsapp,
+      waUrl:escapeHtml('https://wa.me/'+business.whatsapp+'?text='+encodeURIComponent(page.slug==='dogalgaz-panosu/'?'Merhaba Özcan Usta, Sakarya’da doğalgaz panosu yaptırmak istiyorum. Fotoğraf ve ölçü paylaşabilir miyim?':page.slug==='su-sayaci-kapagi/'?'Merhaba Özcan Usta, Sakarya’da su sayacı kapağı yaptırmak istiyorum. Fotoğraf ve ölçü paylaşabilir miyim?':'Merhaba Özcan Usta, su sayacı kapağı veya doğalgaz panosu için bilgi ve fiyat almak istiyorum.')),
       instagram:business.instagram, facebook:business.facebook,
       waterCurrent:page.slug==='su-sayaci-kapagi/'?'aria-current="page"':'',
       gasCurrent:page.slug==='dogalgaz-panosu/'?'aria-current="page"':'',
