@@ -10,4 +10,4 @@ The October 2026 revision restores the user's supplied blue meter/drop logo and 
 - Accessible photo dialog, native FAQ disclosures, reduced-motion support, visible focus.
 - Three crawlable static routes, unique metadata, canonical links, sitemap and factual business schema.
 
-`public/mobile-review.html` is a temporary noindex responsive QA wrapper and must be removed before final handoff.
+Mobile visual QA used a temporary noindex responsive wrapper. The wrapper is removed from the final published website.

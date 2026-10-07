@@ -10,7 +10,9 @@ No npm install or external dependencies are required. Run npm run build, then np
 
 Edit src/pages/*.html, src/partials/*.html, src/styles.css and src/main.js. Business details are in src/config.js. The build writes complete static HTML to dist/ and docs/. GitHub Pages publishes main, /docs; commit the regenerated docs files along with the source.
 
-All three pages contain their readable content and metadata before JavaScript runs. JavaScript enhances the two-product switch, photo lightbox and WhatsApp enquiry sheet. Mobile visitors have a fixed phone/WhatsApp bar and optional measurements. Enquiries are prepared on the visitor’s device; the website does not store them or send a message automatically. Visitors review and send their message in WhatsApp.
+All three pages contain their readable content and metadata before JavaScript runs. JavaScript enhances the accessible photo viewer. Calling and WhatsApp work through direct links without a form or product-selection step. Mobile visitors also have a fixed phone/WhatsApp bar. WhatsApp opens with a product-specific greeting; visitors add their photos and send their own message. The website does not store enquiries.
+
+The original user-supplied blue meter/drop logo is restored. Before-and-after cases are verified real installations from the owner’s Instagram, alongside the user’s original GitHub photographs. ASSET-SOURCES.md records provenance.
 
 ## Contact details
 
